@@ -1,0 +1,6 @@
+{
+  "name": "AttendFlow",
+  "description": "Modern Workforce & Attendance Management SaaS Landing Page for Growing Teams",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

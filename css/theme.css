@@ -1,0 +1,102 @@
+/* ==========================================================================
+   AttendFlow - Theme Variables & Dark Mode Support
+   ========================================================================== */
+
+/* Dark Theme Variables Override when html.dark-mode or body.dark-mode */
+html.dark-mode {
+  --color-bg: #030712;
+  --color-bg-alt: #0F172A;
+  --color-card-bg: #0F172A;
+  --color-border: #1E293B;
+  --color-border-hover: #334155;
+  
+  --color-text-main: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  --color-text-light: #64748B;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 35px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* Specific Dark Mode Sections (Always dark regardless of global mode) */
+.section-dark {
+  background-color: var(--color-dark-section);
+  color: #F8FAFC;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #F8FAFC;
+}
+
+.section-dark p {
+  color: #94A3B8;
+}
+
+.section-dark .card {
+  background-color: var(--color-dark-card);
+  border-color: var(--color-dark-border);
+}
+
+.section-dark .card-title {
+  color: #F8FAFC;
+}
+
+.section-dark .card-desc {
+  color: #94A3B8;
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  transition: all var(--transition-normal);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-btn .icon-sun {
+  display: none;
+}
+
+.theme-toggle-btn .icon-moon {
+  display: block;
+}
+
+html.dark-mode .theme-toggle-btn .icon-sun {
+  display: block;
+}
+
+html.dark-mode .theme-toggle-btn .icon-moon {
+  display: none;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+html.dark-mode .glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+}

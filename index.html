@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AttendFlow - Modern Workforce & Attendance Management Platform</title>
+  <meta name="description" content="AttendFlow simplifies employee management, attendance tracking, leave requests, shift scheduling, and workforce analytics for growing teams and enterprises." />
+  
+  <!-- CSS Architecture -->
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/theme.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/utilities.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. STICKY NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="AttendFlow Homepage">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <polyline points="16 11 18 13 22 9"></polyline>
+          </svg>
+        </div>
+        <span>AttendFlow</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#preview" class="nav-link">Product Preview</a>
+        <a href="#solutions" class="nav-link">Solutions</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#roadmap" class="nav-link">Roadmap</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Mode">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <button class="btn btn-secondary btn-sm" data-modal-target="demoModal">Sign In</button>
+        <button class="btn btn-primary btn-sm" data-modal-target="demoModal">Book Demo</button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#preview" class="nav-link">Product Preview</a>
+      <a href="#solutions" class="nav-link">Solutions</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#roadmap" class="nav-link">Roadmap</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <div class="flex flex-col gap-sm mt-md">
+        <button class="btn btn-secondary w-full" data-modal-target="demoModal">Sign In</button>
+        <button class="btn btn-primary w-full" data-modal-target="demoModal">Book Demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== -->
+  <section class="section hero-section text-center">
+    <div class="container">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span>
+        <span>AttendFlow v3.4 Released</span>
+        <span style="color: var(--color-text-light);">•</span>
+        <span class="text-primary font-semibold">Explore New Features →</span>
+      </div>
+
+      <h1 class="hero-title reveal delay-100">
+        Run Your Workforce From One <span class="hero-gradient-text">Powerful Platform.</span>
+      </h1>
+
+      <p class="hero-description reveal delay-200">
+        Modern employee tracking, automated leave management, shift scheduling, and real-time attendance analytics designed for startups, agencies, software houses, and enterprises.
+      </p>
+
+      <div class="hero-cta-group reveal delay-300">
+        <button class="btn btn-primary btn-lg btn-glow" data-modal-target="demoModal">
+          Start 14-Day Free Trial
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <button class="btn btn-secondary btn-lg" data-modal-target="demoModal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Watch 2-Min Demo
+        </button>
+      </div>
+
+      <!-- Hero Key Stats Grid -->
+      <div class="grid grid-cols-4 gap-md mb-2xl reveal delay-400" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="card text-center" style="padding: 16px;">
+          <div class="font-bold text-primary" style="font-size: 1.75rem;" data-counter="99.8" data-suffix="%">0%</div>
+          <div class="text-muted" style="font-size: 0.8125rem;">Attendance Accuracy</div>
+        </div>
+        <div class="card text-center" style="padding: 16px;">
+          <div class="font-bold text-accent" style="font-size: 1.75rem;" data-counter="15" data-suffix="+ hrs">0 hrs</div>
+          <div class="text-muted" style="font-size: 0.8125rem;">Weekly Admin Time Saved</div>
+        </div>
+        <div class="card text-center" style="padding: 16px;">
+          <div class="font-bold" style="font-size: 1.75rem;" data-counter="500" data-suffix="+">0</div>
+          <div class="text-muted" style="font-size: 0.8125rem;">Companies Onboarded</div>
+        </div>
+        <div class="card text-center" style="padding: 16px;">
+          <div class="font-bold text-primary" style="font-size: 1.75rem;" data-counter="10000" data-suffix="+" data-prefix="">0</div>
+          <div class="text-muted" style="font-size: 0.8125rem;">Daily Check-Ins Processed</div>
+        </div>
+      </div>
+
+      <!-- Dashboard HTML/CSS Preview Mockup -->
+      <div class="mockup-window reveal delay-400">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="mockup-searchbar">
+            🔒 app.attendflow.io/workspace/live-dashboard
+          </div>
+        </div>
+
+        <div class="dashboard-layout text-left">
+          <!-- Sidebar -->
+          <aside class="dashboard-sidebar">
+            <div class="sidebar-item active">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              Dashboard
+            </div>
+            <div class="sidebar-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              Employees (142)
+            </div>
+            <div class="sidebar-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Time Tracking
+            </div>
+            <div class="sidebar-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Leave Requests
+            </div>
+            <div class="sidebar-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              Analytics & Payroll
+            </div>
+            <div class="sidebar-item" style="margin-top: auto;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              Settings
+            </div>
+          </aside>
+
+          <!-- Main Content -->
+          <main class="dashboard-content">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 700;">Workforce Overview</h3>
+                <p style="font-size: 0.8125rem;">Live updates for Today, July 29, 2026</p>
+              </div>
+              <div class="flex items-center gap-sm">
+                <span class="badge badge-green">● All Systems Syncing</span>
+                <button class="btn btn-primary btn-sm" data-modal-target="demoModal">+ Check-in Employee</button>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="dash-stats-row">
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Present Now</div>
+                <div class="dash-stat-value text-accent">128</div>
+                <span class="dash-stat-badge badge-success">+4% vs yesterday</span>
+              </div>
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">On Leave</div>
+                <div class="dash-stat-value text-primary">8</div>
+                <span class="dash-stat-badge badge-success">Approved</span>
+              </div>
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Late Arrival</div>
+                <div class="dash-stat-value text-warning">4</div>
+                <span class="dash-stat-badge badge-warning">2 Grace Used</span>
+              </div>
+              <div class="dash-stat-card">
+                <div class="dash-stat-label">Avg Hours Logged</div>
+                <div class="dash-stat-value">7.8h</div>
+                <span class="dash-stat-badge badge-success">Optimal</span>
+              </div>
+            </div>
+
+            <!-- Mini Visual Chart -->
+            <div class="chart-container">
+              <div class="flex items-center justify-between mb-sm">
+                <div class="font-semibold" style="font-size: 0.875rem;">Weekly Attendance Trend</div>
+                <div class="text-muted" style="font-size: 0.75rem;">Mon - Fri Avg 97.4%</div>
+              </div>
+              <div class="chart-bars">
+                <div class="chart-bar-group">
+                  <div class="chart-bar interactive-chart-bar" style="height: 85%;" data-day="Mon" data-val="96%"></div>
+                  <span class="chart-bar-label">Mon</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar interactive-chart-bar" style="height: 95%;" data-day="Tue" data-val="99%"></div>
+                  <span class="chart-bar-label">Tue</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar interactive-chart-bar" style="height: 92%;" data-day="Wed" data-val="98%"></div>
+                  <span class="chart-bar-label">Wed</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar interactive-chart-bar" style="height: 88%;" data-day="Thu" data-val="95%"></div>
+                  <span class="chart-bar-label">Thu</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar interactive-chart-bar" style="height: 94%;" data-day="Fri" data-val="97%"></div>
+                  <span class="chart-bar-label">Fri</span>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. TRUSTED BY SECTION
+       ========================================================================== -->
+  <section class="section section-alt text-center" style="padding-top: var(--space-2xl); padding-bottom: var(--space-2xl);">
+    <div class="container">
+      <p class="text-muted font-medium mb-lg" style="font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.1em;">
+        Trusted By Operations & HR Leaders At
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-2xl opacity-75">
+        <!-- SVG Logos -->
+        <div class="flex items-center gap-xs font-bold text-muted" style="font-size: 1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"></circle></svg>
+          NEXUS TECH
+        </div>
+        <div class="flex items-center gap-xs font-bold text-muted" style="font-size: 1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+          CLOUDSCALE
+        </div>
+        <div class="flex items-center gap-xs font-bold text-muted" style="font-size: 1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon></svg>
+          VELOCITY BPO
+        </div>
+        <div class="flex items-center gap-xs font-bold text-muted" style="font-size: 1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>
+          HYPERION LABS
+        </div>
+        <div class="flex items-center gap-xs font-bold text-muted" style="font-size: 1.25rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.71.59-1.81-.2-2.6-.79-.79-1.9-.91-2.8-.4z"></path></svg>
+          PULSE AGENCY
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. WHY ATTENDFLOW (PROBLEM VS SOLUTION)
+       ========================================================================== -->
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Why AttendFlow</span>
+        <h2 class="section-title">Replace Chaotic Legacy Processes With One Unified System</h2>
+        <p class="section-description">
+          Stop losing hours to manual spreadsheets, WhatsApp roll calls, lost paper registers, and monthly payroll discrepancies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-xl">
+        <!-- Outdated Old Way -->
+        <div class="comparison-card card-problem reveal">
+          <h3 class="card-title text-danger flex items-center gap-sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+            The Outdated Manual Way
+          </h3>
+          <p class="card-desc mb-md">Frustrating admin overhead that drains productivity every week.</p>
+          <div class="check-list">
+            <div class="check-item">
+              <span class="text-danger">❌</span>
+              <span><strong>Messy Excel Sheets:</strong> Formulas break, files overwrite, and version history is lost.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-danger">❌</span>
+              <span><strong>Paper Check-in Sheets:</strong> Unreliable physical logs, buddy punching, and lost records.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-danger">❌</span>
+              <span><strong>WhatsApp Updates:</strong> Chaotic group messages for leaves that get buried and forgotten.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-danger">❌</span>
+              <span><strong>Manual Payroll Hours:</strong> Operations spends 3+ days every month tallying overtime.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-danger">❌</span>
+              <span><strong>Zero Real-time Visibility:</strong> Managers have no instant view of who is working right now.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The AttendFlow Way -->
+        <div class="comparison-card card-solution reveal delay-200">
+          <h3 class="card-title text-accent flex items-center gap-sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            The Modern AttendFlow Way
+          </h3>
+          <p class="card-desc mb-md">Automated, transparent workforce management built for growth.</p>
+          <div class="check-list">
+            <div class="check-item">
+              <span class="text-accent">✅</span>
+              <span><strong>Instant 1-Click Check-in:</strong> Web, mobile, QR, or geofenced IP punch-ins in seconds.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-accent">✅</span>
+              <span><strong>Automated Leave Workflows:</strong> 1-click leave requests with manager approval notifications.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-accent">✅</span>
+              <span><strong>Live Executive Dashboard:</strong> Instant real-time headcount, late alerts, and attendance status.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-accent">✅</span>
+              <span><strong>1-Click CSV Payroll Export:</strong> Accurately calculated hours, overtime, and deductions ready for payout.</span>
+            </div>
+            <div class="check-item">
+              <span class="text-accent">✅</span>
+              <span><strong>Role-Based Security & Audit Logs:</strong> Bank-grade encryption with complete historical tracking.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. FEATURES GRID (15 COMPREHENSIVE CARDS)
+       ========================================================================== -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Full-Featured Platform</span>
+        <h2 class="section-title">Everything You Need to Scale Your Workforce Operations</h2>
+        <p class="section-description">
+          A comprehensive suite of attendance, shift management, and employee intelligence tools.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-lg">
+        <!-- Feature 1 -->
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="card-title">Employee Management</h3>
+          <p class="card-desc">Centralized employee profiles, contact directories, document storage, and departmental organizing.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card reveal delay-100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="card-title">Attendance Tracking</h3>
+          <p class="card-desc">Flexible clock-in via web browser, mobile apps, geofenced IP restriction, or physical biometric sync.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card reveal delay-200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <h3 class="card-title">Leave & PTO Management</h3>
+          <p class="card-desc">Custom leave policies, paid time off accruals, holiday balance tracking, and 1-click approvals.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          </div>
+          <h3 class="card-title">Executive Dashboard</h3>
+          <p class="card-desc">High-level insights into team availability, absenteeism trends, overtime metrics, and team health.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="card reveal delay-100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="card-title">Role-Based Access</h3>
+          <p class="card-desc">Granular permissions for Super Admin, HR Leaders, Operations Managers, Team Leads, and Employees.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="card reveal delay-200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+          </div>
+          <h3 class="card-title">Department Management</h3>
+          <p class="card-desc">Group employees into Engineering, Support, Sales, and Operations for targeted scheduling and reporting.</p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M3 10h18"></path></svg>
+          </div>
+          <h3 class="card-title">Shift Scheduling</h3>
+          <p class="card-desc">Create flexible morning, evening, or night shifts with automated rotational calendars and swap requests.</p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="card reveal delay-100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h3 class="card-title">Holiday Calendar</h3>
+          <p class="card-desc">Global and regional public holiday configurations auto-synced across multi-country distributed teams.</p>
+        </div>
+
+        <!-- Feature 9 -->
+        <div class="card reveal delay-200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3 class="card-title">Reports & Analytics</h3>
+          <p class="card-desc">Customizable attendance reports, tardiness analysis, monthly work hours, and exportable PDF summaries.</p>
+        </div>
+
+        <!-- Feature 10 -->
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h3 class="card-title">Company Settings</h3>
+          <p class="card-desc">Configure company branding, grace period limits, overtime multipliers, and working day rules.</p>
+        </div>
+
+        <!-- Feature 11 -->
+        <div class="card reveal delay-100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h3 class="card-title">Audit Logs</h3>
+          <p class="card-desc">Immutable event logging for manual record edits, punch-in overrides, and admin actions.</p>
+        </div>
+
+        <!-- Feature 12 -->
+        <div class="card reveal delay-200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="card-title">Secure Authentication</h3>
+          <p class="card-desc">JWT authentication, SSO integration, Google Workspace login, and mandatory MFA support.</p>
+        </div>
+
+        <!-- Feature 13 -->
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+          <h3 class="card-title">Real-Time Notifications</h3>
+          <p class="card-desc">Automated email, Slack, and in-app alerts for late check-ins, missing logs, and leave updates.</p>
+        </div>
+
+        <!-- Feature 14 -->
+        <div class="card reveal delay-100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <h3 class="card-title">CSV Import & Export</h3>
+          <p class="card-desc">Bulk import existing employee rosters and export payroll-ready CSV formats compatible with Deel, Rippling & Gusto.</p>
+        </div>
+
+        <!-- Feature 15 -->
+        <div class="card reveal delay-200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          </div>
+          <h3 class="card-title">Real-Time Insights</h3>
+          <p class="card-desc">Identify workforce patterns, tardiness spikes, and department burnout before they affect operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. INTERACTIVE PRODUCT PREVIEW SECTION
+       ========================================================================== -->
+  <section class="section" id="preview">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Live Interactive Showcase</span>
+        <h2 class="section-title">Designed for Modern Operations Teams</h2>
+        <p class="section-description">
+          Take a look inside the AttendFlow management portal. Filter data by department or inspect real-time logs directly below.
+        </p>
+      </div>
+
+      <div class="card reveal" style="padding: 0; overflow: hidden; border-radius: var(--radius-xl);">
+        <div class="mockup-header" style="border-radius: 0;">
+          <div class="mockup-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="flex items-center gap-md" style="margin-left: auto;">
+            <label for="dashboardDeptFilter" style="font-size: 0.8125rem; font-weight: 600;">Filter Department:</label>
+            <select id="dashboardDeptFilter" style="background: var(--color-bg-alt); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: 6px; font-size: 0.8125rem;">
+              <option value="all">All Departments</option>
+              <option value="engineering">Engineering</option>
+              <option value="support">Customer Support</option>
+              <option value="sales">Sales & Growth</option>
+              <option value="operations">Operations</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sample Interactive Table -->
+        <div style="overflow-x: auto; padding: var(--space-md);">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-text-muted);">
+                <th style="padding: 12px;">Employee</th>
+                <th style="padding: 12px;">Department</th>
+                <th style="padding: 12px;">Status</th>
+                <th style="padding: 12px;">Clock In</th>
+                <th style="padding: 12px;">Shift</th>
+                <th style="padding: 12px;">Location / IP</th>
+                <th style="padding: 12px; text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="employee-row" data-dept="engineering" style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 12px; font-weight: 600;">
+                  <div class="flex items-center gap-sm">
+                    <div style="width: 32px; height: 32px; border-radius: 50%; background: #2563EB; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">AK</div>
+                    Alex Chen
+                  </div>
+                </td>
+                <td style="padding: 12px;">Engineering</td>
+                <td style="padding: 12px;"><span class="badge badge-green">● Present</span></td>
+                <td style="padding: 12px; font-weight: 600;">08:58 AM</td>
+                <td style="padding: 12px;">Morning (9-5)</td>
+                <td style="padding: 12px; color: var(--color-text-muted);">HQ Office (192.168.1.45)</td>
+                <td style="padding: 12px; text-align: right;"><button class="btn btn-secondary btn-sm" data-modal-target="demoModal">View Log</button></td>
+              </tr>
+              <tr class="employee-row" data-dept="support" style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 12px; font-weight: 600;">
+                  <div class="flex items-center gap-sm">
+                    <div style="width: 32px; height: 32px; border-radius: 50%; background: #10B981; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">SR</div>
+                    Sarah Rodriguez
+                  </div>
+                </td>
+                <td style="padding: 12px;">Customer Support</td>
+                <td style="padding: 12px;"><span class="badge badge-green">● Present</span></td>
+                <td style="padding: 12px; font-weight: 600;">09:02 AM</td>
+                <td style="padding: 12px;">Morning (9-5)</td>
+                <td style="padding: 12px; color: var(--color-text-muted);">Remote (Geo Verified)</td>
+                <td style="padding: 12px; text-align: right;"><button class="btn btn-secondary btn-sm" data-modal-target="demoModal">View Log</button></td>
+              </tr>
+              <tr class="employee-row" data-dept="sales" style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 12px; font-weight: 600;">
+                  <div class="flex items-center gap-sm">
+                    <div style="width: 32px; height: 32px; border-radius: 50%; background: #F59E0B; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">MJ</div>
+                    Marcus Johnson
+                  </div>
+                </td>
+                <td style="padding: 12px;">Sales & Growth</td>
+                <td style="padding: 12px;"><span class="badge" style="background: var(--color-warning-light); color: var(--color-warning);">⚠️ Late (+18m)</span></td>
+                <td style="padding: 12px; font-weight: 600;">09:18 AM</td>
+                <td style="padding: 12px;">Morning (9-5)</td>
+                <td style="padding: 12px; color: var(--color-text-muted);">Client Site</td>
+                <td style="padding: 12px; text-align: right;"><button class="btn btn-secondary btn-sm" data-modal-target="demoModal">View Log</button></td>
+              </tr>
+              <tr class="employee-row" data-dept="operations" style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 12px; font-weight: 600;">
+                  <div class="flex items-center gap-sm">
+                    <div style="width: 32px; height: 32px; border-radius: 50%; background: #64748B; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">EP</div>
+                    Elena Patel
+                  </div>
+                </td>
+                <td style="padding: 12px;">Operations</td>
+                <td style="padding: 12px;"><span class="badge badge-primary">✈️ Annual Leave</span></td>
+                <td style="padding: 12px; color: var(--color-text-muted);">—</td>
+                <td style="padding: 12px;">Approved PTO</td>
+                <td style="padding: 12px; color: var(--color-text-muted);">System PTO Sync</td>
+                <td style="padding: 12px; text-align: right;"><button class="btn btn-secondary btn-sm" data-modal-target="demoModal">View Log</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. HOW IT WORKS (4-STEP FLOW)
+       ========================================================================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Simple Setup Process</span>
+        <h2 class="section-title">Up and Running in Less Than 10 Minutes</h2>
+        <p class="section-description">
+          No complex hardware installations or tedious setup. Simple, intuitive onboarding for your entire team.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-4 gap-lg">
+        <div class="step-card reveal">
+          <div class="step-number">1</div>
+          <h3 class="card-title mt-md">Add Employees</h3>
+          <p class="card-desc">Bulk import employees via CSV or send email invite links with automated role assignment.</p>
+        </div>
+
+        <div class="step-card reveal delay-100">
+          <div class="step-number">2</div>
+          <h3 class="card-title mt-md">Employees Check In</h3>
+          <p class="card-desc">Staff check in via browser, mobile app, Slack command, or authorized IP kiosk in seconds.</p>
+        </div>
+
+        <div class="step-card reveal delay-200">
+          <div class="step-number">3</div>
+          <h3 class="card-title mt-md">Managers Monitor</h3>
+          <p class="card-desc">Operations and HR leads view real-time headcount, late alerts, and approve leave requests.</p>
+        </div>
+
+        <div class="step-card reveal delay-300">
+          <div class="step-number">4</div>
+          <h3 class="card-title mt-md">Generate Reports</h3>
+          <p class="card-desc">Export payroll-ready CSV summaries with automated overtime and holiday calculations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. BENEFITS SECTION (BUSINESS OUTCOMES)
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Business Impact</span>
+        <h2 class="section-title">Built to Deliver Measurable ROI</h2>
+        <p class="section-description">
+          AttendFlow is engineered to save administrative hours, eliminate payroll friction, and give leaders total peace of mind.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-lg">
+        <div class="card reveal">
+          <div class="card-icon" style="background: var(--color-accent-light); color: var(--color-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="card-title">Save 15+ Hours Every Week</h3>
+          <p class="card-desc">Automate manual tallying and leave tracking so your HR team can focus on culture and growth.</p>
+        </div>
+
+        <div class="card reveal delay-100">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="card-title">Reduce Manual Errors to 0%</h3>
+          <p class="card-desc">Eliminate human entry mistakes in payroll calculations with automated hour logging and audit verification.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="card-icon" style="background: var(--color-warning-light); color: var(--color-warning);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+          </div>
+          <h3 class="card-title">Increase Accountability</h3>
+          <p class="card-desc">Geofenced IP verification and automated timestamping prevent buddy punching and unauthorized check-ins.</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3 class="card-title">360° Workforce Visibility</h3>
+          <p class="card-desc">Know exactly who is working, on break, or on leave across all offices and remote locations in real-time.</p>
+        </div>
+
+        <div class="card reveal delay-100">
+          <div class="card-icon" style="background: var(--color-accent-light); color: var(--color-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          </div>
+          <h3 class="card-title">Better Executive Decisions</h3>
+          <p class="card-desc">Use accurate historical data to optimize shift coverage, manage overtime costs, and prevent burnout.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <h3 class="card-title">Seamless Scalability</h3>
+          <p class="card-desc">Whether you have 10 employees or 10,000, AttendFlow scales gracefully with zero performance degradation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. INDUSTRIES SERVED
+       ========================================================================== -->
+  <section class="section section-alt" id="industries">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Tailored Solutions</span>
+        <h2 class="section-title">Built for Every High-Growth Industry</h2>
+        <p class="section-description">
+          Customized workflows for diverse team structures, shift arrangements, and operating environments.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-4 gap-md">
+        <div class="card reveal">
+          <h3 class="card-title" style="font-size: 1.125rem;">💻 Software Houses</h3>
+          <p class="card-desc">Flexible hybrid clock-ins, project time logging, and developer PTO tracking.</p>
+        </div>
+
+        <div class="card reveal delay-100">
+          <h3 class="card-title" style="font-size: 1.125rem;">🎧 Call Centers & BPOs</h3>
+          <p class="card-desc">Strict rotational shift scheduling, break timers, and grace period controls.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <h3 class="card-title" style="font-size: 1.125rem;">🏥 Healthcare & Clinics</h3>
+          <p class="card-desc">24/7 multi-shift rosters, emergency coverage swaps, and attendance audit logs.</p>
+        </div>
+
+        <div class="card reveal delay-300">
+          <h3 class="card-title" style="font-size: 1.125rem;">🏗️ Construction</h3>
+          <p class="card-desc">Geofenced mobile punch-in for field workers across remote job sites.</p>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card-title" style="font-size: 1.125rem;">🛍️ Retail & Stores</h3>
+          <p class="card-desc">Multi-store branch management, store manager approvals, and shift calendars.</p>
+        </div>
+
+        <div class="card reveal delay-100">
+          <h3 class="card-title" style="font-size: 1.125rem;">🏭 Manufacturing</h3>
+          <p class="card-desc">Biometric hardware integration, factory floor shifts, and overtime calculations.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <h3 class="card-title" style="font-size: 1.125rem;">🎓 Education</h3>
+          <p class="card-desc">Faculty and administrative staff tracking with semester holiday calendars.</p>
+        </div>
+
+        <div class="card reveal delay-300">
+          <h3 class="card-title" style="font-size: 1.125rem;">🚀 Agencies & Services</h3>
+          <p class="card-desc">Client billable hours verification, agency team rosters, and monthly exports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. SECURITY SECTION (DARK MODE OVERRIDE)
+       ========================================================================== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Enterprise Security</span>
+        <h2 class="section-title">Bank-Grade Protection for Your HR Data</h2>
+        <p class="section-description">
+          We prioritize data privacy, encryption, and compliance at every layer of our infrastructure.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-lg">
+        <div class="card reveal">
+          <div class="card-icon" style="background: rgba(37, 99, 235, 0.2); color: #60A5FA;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="card-title">JWT & OAuth Authentication</h3>
+          <p class="card-desc">Secure JSON Web Tokens with refresh rotation and Google Workspace SSO authentication.</p>
+        </div>
+
+        <div class="card reveal delay-100">
+          <div class="card-icon" style="background: rgba(37, 99, 235, 0.2); color: #60A5FA;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3 class="card-title">Role-Based Permissions</h3>
+          <p class="card-desc">Ensure managers only access their own department records with strict data isolation.</p>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="card-icon" style="background: rgba(37, 99, 235, 0.2); color: #60A5FA;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h3 class="card-title">Immutable Audit Trail</h3>
+          <p class="card-desc">Every manual punch edit, policy change, and export is logged with detailed timestamps and IP addresses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       11. FUTURE ROADMAP
+       ========================================================================== -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Product Evolution</span>
+        <h2 class="section-title">Constantly Innovating For Your Team</h2>
+        <p class="section-description">
+          See what we've shipped recently and what exciting capabilities are coming next to AttendFlow.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Current -->
+        <div class="timeline-item reveal">
+          <div class="timeline-badge"></div>
+          <div class="card">
+            <span class="badge badge-green mb-sm">● Available Now (v3.4)</span>
+            <h3 class="card-title">Core Platform & Analytics</h3>
+            <p class="card-desc">Web Punch-in, Executive Dashboard, Department Roster, Leave Workflows, and CSV Payroll Exports.</p>
+          </div>
+        </div>
+
+        <!-- Q3 2026 -->
+        <div class="timeline-item reveal delay-100">
+          <div class="timeline-badge" style="background: var(--color-primary);"></div>
+          <div class="card">
+            <span class="badge badge-primary mb-sm">🚀 In Development (Q3 2026)</span>
+            <h3 class="card-title">Native Mobile Apps & Geofencing</h3>
+            <p class="card-desc">Dedicated iOS and Android native apps with GPS geofencing, face check-in, and offline sync support.</p>
+          </div>
+        </div>
+
+        <!-- Q4 2026 -->
+        <div class="timeline-item reveal delay-200">
+          <div class="timeline-badge" style="background: var(--color-warning);"></div>
+          <div class="card">
+            <span class="badge" style="background: var(--color-warning-light); color: var(--color-warning);">🔮 Planned (Q4 2026)</span>
+            <h3 class="card-title">AI Insights & Biometric Sync</h3>
+            <p class="card-desc">Direct hardware integration with ZKTeco/Hikvision biometric devices, AI anomaly detection, and Slackbot punch commands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. PRICING SECTION
+       ========================================================================== -->
+  <section class="section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Transparent Pricing</span>
+        <h2 class="section-title">Simple, Predictable Plans For Any Scale</h2>
+        <p class="section-description">
+          No hidden fees or setup charges. Start with a 14-day free trial. Cancel anytime.
+        </p>
+      </div>
+
+      <!-- Monthly / Annual Billing Toggle -->
+      <div class="pricing-toggle-wrapper reveal">
+        <span class="font-semibold">Monthly Billing</span>
+        <div class="pricing-switch" id="pricingSwitch">
+          <div class="pricing-switch-handle"></div>
+        </div>
+        <span class="font-semibold flex items-center gap-xs">
+          Annual Billing
+          <span class="badge badge-green">Save 20%</span>
+        </span>
+      </div>
+
+      <div class="grid grid-cols-3 gap-xl items-center">
+        <!-- Starter Tier -->
+        <div class="pricing-card reveal">
+          <h3 style="font-size: 1.25rem; font-weight: 700;">Starter</h3>
+          <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">Ideal for small startups and growing teams.</p>
+          
+          <div class="pricing-amount" id="starterPrice">$19</div>
+          <p class="billing-cycle-text text-muted" style="font-size: 0.8125rem;">/user/mo (billed monthly)</p>
+
+          <div style="margin: var(--space-lg) 0; flex: 1;">
+            <div class="check-item mb-sm"><span>✅</span> Up to 15 Employees</div>
+            <div class="check-item mb-sm"><span>✅</span> Web Clock-in / Out</div>
+            <div class="check-item mb-sm"><span>✅</span> Basic Leave Management</div>
+            <div class="check-item mb-sm"><span>✅</span> CSV Attendance Exports</div>
+            <div class="check-item mb-sm"><span>✅</span> Standard Email Support</div>
+          </div>
+
+          <button class="btn btn-secondary w-full" data-modal-target="demoModal">Start Free Trial</button>
+        </div>
+
+        <!-- Growth Tier (Featured) -->
+        <div class="pricing-card featured reveal delay-100">
+          <span class="popular-badge">Most Popular</span>
+          <h3 style="font-size: 1.25rem; font-weight: 700;">Growth</h3>
+          <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">For software houses, agencies, & SMEs.</p>
+
+          <div class="pricing-amount text-primary" id="growthPrice">$49</div>
+          <p class="billing-cycle-text text-muted" style="font-size: 0.8125rem;">/user/mo (billed monthly)</p>
+
+          <div style="margin: var(--space-lg) 0; flex: 1;">
+            <div class="check-item mb-sm"><span>✅</span> Up to 50 Employees</div>
+            <div class="check-item mb-sm"><span>✅</span> Web + Mobile Geofence Punch</div>
+            <div class="check-item mb-sm"><span>✅</span> Shift & Rotation Scheduling</div>
+            <div class="check-item mb-sm"><span>✅</span> Department Analytics & Overtime</div>
+            <div class="check-item mb-sm"><span>✅</span> Custom Grace Period Rules</div>
+            <div class="check-item mb-sm"><span>✅</span> Priority Live Chat Support</div>
+          </div>
+
+          <button class="btn btn-primary w-full btn-glow" data-modal-target="demoModal">Start 14-Day Free Trial</button>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="pricing-card reveal delay-200">
+          <h3 style="font-size: 1.25rem; font-weight: 700;">Enterprise</h3>
+          <p class="text-muted" style="font-size: 0.875rem; margin-top: 4px;">For large organizations & call centers.</p>
+
+          <div class="pricing-amount" id="enterprisePrice">$99</div>
+          <p class="billing-cycle-text text-muted" style="font-size: 0.8125rem;">/user/mo (billed monthly)</p>
+
+          <div style="margin: var(--space-lg) 0; flex: 1;">
+            <div class="check-item mb-sm"><span>✅</span> Unlimited Employees</div>
+            <div class="check-item mb-sm"><span>✅</span> Biometric Hardware API Sync</div>
+            <div class="check-item mb-sm"><span>✅</span> Custom Audit Logs & Compliance</div>
+            <div class="check-item mb-sm"><span>✅</span> Dedicated Account Manager</div>
+            <div class="check-item mb-sm"><span>✅</span> SLA & 99.9% Uptime Guarantee</div>
+          </div>
+
+          <button class="btn btn-secondary w-full" data-modal-target="demoModal">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. TESTIMONIALS
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Customer Success</span>
+        <h2 class="section-title">Loved by Operations Leaders Everywhere</h2>
+        <p class="section-description">
+          Read how companies transformed their workforce efficiency with AttendFlow.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-lg">
+        <div class="card reveal">
+          <div class="flex items-center gap-xs text-warning mb-md">
+            ★★★★★
+          </div>
+          <p class="card-desc mb-lg" style="font-size: 1rem; color: var(--color-text-main); font-style: italic;">
+            "AttendFlow saved our HR team over 18 hours every single week. No more manual Excel check-ins or lost PTO requests."
+          </p>
+          <div class="flex items-center gap-md mt-auto">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+              DM
+            </div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.9375rem;">David Miller</div>
+              <div style="font-size: 0.8125rem; color: var(--color-text-muted);">VP of Operations, Velocity Software</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal delay-100">
+          <div class="flex items-center gap-xs text-warning mb-md">
+            ★★★★★
+          </div>
+          <p class="card-desc mb-lg" style="font-size: 1rem; color: var(--color-text-main); font-style: italic;">
+            "Managing 120 call center agents across 3 rotational shifts was a nightmare until we introduced AttendFlow. It just works."
+          </p>
+          <div class="flex items-center gap-md mt-auto">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+              SA
+            </div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.9375rem;">Sophia Alva</div>
+              <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Head of HR, Nexus BPO</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal delay-200">
+          <div class="flex items-center gap-xs text-warning mb-md">
+            ★★★★★
+          </div>
+          <p class="card-desc mb-lg" style="font-size: 1rem; color: var(--color-text-main); font-style: italic;">
+            "The 1-click payroll CSV export is worth 10x the monthly price alone. Zero discrepancies during our monthly audits."
+          </p>
+          <div class="flex items-center gap-md mt-auto">
+            <div style="width: 42px; height: 42px; border-radius: 50%; background: #8B5CF6; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+              JH
+            </div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.9375rem;">James Henderson</div>
+              <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Founder & CEO, Pulse Creative</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       14. FAQ ACCORDION
+       ========================================================================== -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Frequently Asked Questions</span>
+        <h2 class="section-title">Got Questions? We Have Answers.</h2>
+        <p class="section-description">
+          Everything you need to know about setting up and using AttendFlow.
+        </p>
+      </div>
+
+      <div class="accordion reveal">
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What types of businesses is AttendFlow best for?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content">
+            <p>AttendFlow is custom-tailored for growing startups, SMEs, software agencies, BPO call centers, healthcare facilities, and professional service companies with 5 to 5,000+ employees.</p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How does attendance tracking work for remote workers?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content">
+            <p>Remote employees can check in with 1-click from any web browser or mobile phone. You can optionally enable IP whitelist boundaries, GPS geofencing, or browser verification to ensure accurate location logging.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Can I import existing employee data from Excel or CSV?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content">
+            <p>Yes! Our built-in CSV Importer allows you to upload existing staff directories, past leave balances, and departmental assignments in under 2 minutes.</p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Is there a free trial available?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content">
+            <p>We offer a 14-day fully featured free trial with no credit card required. You can test all Growth tier features with your team immediately.</p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How does role-based access control work?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content">
+            <p>You can assign granular roles: Super Admin (full company access), HR Manager (leave approvals and roster edits), Department Lead (view team logs), and Employee (personal check-in and PTO requests).</p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>What kind of support do you offer?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="accordion-content">
+            <p>All plans include email and documentation access. Growth and Enterprise plans receive 24/7 priority live chat support and dedicated onboarding assistance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       15. FINAL CTA SECTION
+       ========================================================================== -->
+  <section class="section text-center" style="background: linear-gradient(135deg, var(--color-primary) 0%, #1D4ED8 100%); color: #FFFFFF;">
+    <div class="container reveal">
+      <h2 style="font-size: 2.75rem; font-weight: 800; color: #FFFFFF; margin-bottom: var(--space-md); letter-spacing: -0.03em;">
+        Ready to Modernize Your Workforce Operations?
+      </h2>
+      <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.9); max-width: 680px; margin-left: auto; margin-right: auto; margin-bottom: var(--space-2xl);">
+        Join 500+ forward-thinking companies saving 15+ hours every week. Start your 14-day free trial today.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-md">
+        <button class="btn btn-secondary btn-lg" style="background: #FFFFFF; color: var(--color-primary);" data-modal-target="demoModal">
+          Start 14-Day Free Trial
+        </button>
+        <button class="btn btn-dark btn-lg" style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.3);" data-modal-target="demoModal">
+          Book Custom Demo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       16. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-cols-4 gap-xl mb-3xl">
+        <!-- Col 1: Brand -->
+        <div style="grid-column: span 1;">
+          <a href="#" class="brand-logo mb-md" style="color: #FFFFFF;">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+            </div>
+            <span>AttendFlow</span>
+          </a>
+          <p style="font-size: 0.875rem; line-height: 1.6;">
+            Modern workforce operations, attendance tracking, and leave management for growing teams.
+          </p>
+          <div class="social-icons">
+            <a href="#" class="social-icon-btn" aria-label="Twitter/X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg></a>
+            <a href="#" class="social-icon-btn" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Product -->
+        <div>
+          <h4 class="footer-title">Product</h4>
+          <div class="footer-links">
+            <a href="#features" class="footer-link">Features Grid</a>
+            <a href="#preview" class="footer-link">Live Preview</a>
+            <a href="#pricing" class="footer-link">Pricing Plans</a>
+            <a href="#roadmap" class="footer-link">Roadmap</a>
+            <a href="#" class="footer-link">Changelog</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Solutions -->
+        <div>
+          <h4 class="footer-title">Solutions</h4>
+          <div class="footer-links">
+            <a href="#industries" class="footer-link">Software Houses</a>
+            <a href="#industries" class="footer-link">Call Centers & BPO</a>
+            <a href="#industries" class="footer-link">Healthcare</a>
+            <a href="#industries" class="footer-link">Construction & Field</a>
+            <a href="#industries" class="footer-link">Agencies</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Legal & Contact -->
+        <div>
+          <h4 class="footer-title">Company & Legal</h4>
+          <div class="footer-links">
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Service</a>
+            <a href="#" class="footer-link">Security Overview</a>
+            <a href="#" class="footer-link">Contact Support</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between" style="border-top: 1px solid #1E293B; padding-top: var(--space-lg); font-size: 0.8125rem;">
+        <div>© 2026 AttendFlow Inc. All rights reserved.</div>
+        <div class="flex gap-md">
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DEMO REQUEST MODAL POPUP
+       ========================================================================== -->
+  <div class="modal-overlay" id="demoModal">
+    <div class="modal-card">
+      <div class="flex items-center justify-between mb-md">
+        <h3 style="font-size: 1.5rem; font-weight: 800;">Get Started With AttendFlow</h3>
+        <button id="closeModalBtn" style="font-size: 1.5rem; cursor: pointer; color: var(--color-text-muted);">&times;</button>
+      </div>
+      <p class="text-muted mb-lg" style="font-size: 0.9375rem;">
+        Fill in your details to get instant 14-day demo access to the AttendFlow workforce platform.
+      </p>
+
+      <form id="demoForm" class="flex flex-col gap-md">
+        <div>
+          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Full Name</label>
+          <input type="text" id="demoName" placeholder="e.g. Alex Mercer" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);" />
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Work Email</label>
+          <input type="email" id="demoEmail" placeholder="alex@company.com" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);" />
+        </div>
+
+        <div>
+          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Company Size</label>
+          <select style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);">
+            <option>1 - 15 Employees</option>
+            <option>16 - 50 Employees</option>
+            <option>51 - 200 Employees</option>
+            <option>200+ Employees</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-full mt-sm btn-glow">
+          Access Demo Workspace →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Back To Top Floating Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- JS Module Entry Point -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
