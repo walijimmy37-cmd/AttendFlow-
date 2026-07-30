@@ -381,6 +381,36 @@ export function initShareButton() {
 }
 
 // --------------------------------------------------------------------------
+// 9. Sales & Enterprise View Mode Handler (?view=sales or ?view=enterprise)
+// --------------------------------------------------------------------------
+export function initSalesViewMode() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const viewMode = urlParams.get('view');
+
+  if (viewMode === 'sales' || viewMode === 'enterprise') {
+    trackEvent('sales_view_mode_activated', { mode: viewMode });
+
+    // Highlight Enterprise elements & show banner
+    const banner = document.createElement('div');
+    banner.className = 'sales-mode-banner';
+    banner.innerHTML = `
+      <div class="container flex items-center justify-between py-xs text-xs font-semibold">
+        <span>🛡️ <strong>Enterprise Sales Mode Active:</strong> SOC2 Compliance, Audit Logs & Custom SSO pre-selected.</span>
+        <button class="btn btn-secondary btn-sm text-xs" onclick="this.parentElement.parentElement.remove()" style="padding: 2px 8px;">Dismiss</button>
+      </div>
+    `;
+    banner.style.cssText = 'background: linear-gradient(90deg, #1E1B4B, #312E81); color: #EEF2FF; border-bottom: 1px solid #4338CA;';
+    document.body.prepend(banner);
+
+    // Auto-select Enterprise tier option in demo modal if opened
+    const demoUseCase = $('#demoUseCase');
+    if (demoUseCase) {
+      demoUseCase.value = 'Payroll CSV Export';
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
 // 8. Toast Notification System
 // --------------------------------------------------------------------------
 export function showToast(message, duration = 3500) {

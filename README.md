@@ -4,6 +4,62 @@ AttendFlow is a modern, high-conversion B2B SaaS landing page and interactive wo
 
 ---
 
+## 📁 Master Documentation Map
+
+AttendFlow includes a complete, enterprise-grade business specification system categorized into 4 tiers:
+
+### 🌟 1. Strategic Company Design
+- `VISION.md` — 10-Year North-Star Vision & Ambition Scale Models
+- `CAPITAL.md` — Capital Strategy, Funding Triggers & Financial Model
+- `TEAM_ORG.md` — Phased Hiring Plan, Role Profiles & Org Structure
+- `EQUITY_GOVERNANCE.md` — Cap Table, Incentives & Corporate Governance
+- `LEGAL_COMPLIANCE.md` — Corporate Legal Foundations & Compliance Trajectory
+- `CULTURE.md` — Core Values, Operating Principles & Meeting Norms
+- `EXIT_OPTIONS.md` — Strategic Exit Pathways & M&A Drivers
+
+### 🎯 2. Product Marketing & Positioning
+- `POSITIONING.md` — One-Liner, 60-Sec Pitch & Target Audience Matrix
+- `STORY.md` — Before/After Scenarios & Reusable Narrative Mini-Stories
+- `CONTENT.md` — Message Hierarchy, Content Pillars & Microcopy Snippets
+- `SALES_ENABLEMENT.md` — Demo Script, One-Pager & Email Outreach Sequences
+- `PROOF.md` — Social Proof Framework & 1-Page Case Study Template
+- `ROADMAP.md` — Product Feature Evolution & Multi-Page Migration Plan
+
+### 🚀 3. Go-to-Market & Revenue Operations
+- `GTM.md` — Ideal Customer Profiles (ICPs) & Strategic Motions
+- `FUNNEL.md` — 4-Stage Conversion Funnel & Mathematical Model
+- `INBOUND.md` — SEO Keyword Strategy, Content Calendar & Lead Magnets
+- `OUTBOUND.md` — Prospecting Criteria & 6-Touch Outreach Sequences
+- `REVENUE.md` — Pricing Model, Unit Economics & 12-Month Targets
+- `PARTNERSHIPS.md` — Channel Program Tiers & Partner Outreach Sequences
+- `OPS_STACK.md` — Internal Tooling, Lead Routing & Hygiene Rules
+- `90_DAY_PLAN.md` — Tactical 90-Day Execution Sprints
+
+### ⚙️ 4. Execution & Operating System
+- `ATTENDFLOW_OS.md` — Master OS Navigation Map & Architectural Index
+- `HOW_TO_USE_ATTENDFLOW.md` — Plain-Language Company Operating Guide & Start-Here Banner
+- `STRATEGY_EXEC_LOOP.md` — Strategy-to-Execution Annual/Quarterly/Weekly Loop
+- `PLANNING_CALENDAR.md` — Unified Annual, Quarterly & Monthly Planning Calendar
+- `OPERATING_RHYTHM.md` — Weekly Operating Cadence & Time-Blocking Schedules
+- `DASHBOARDS.md` — Executive, Growth, Sales & CS Scorecards
+- `DECISION_FRAMEWORKS.md` — ICE Experiment Prioritization & Product Quadrants
+- `CUSTOMER_LEARNING.md` — Customer Feedback Processing & Weekly Synthesis
+- `RISKS.md` — Risk Register & Pre-Planned Contingency Playbooks
+- `FOUNDER_PLAYBOOK.md` & `PLAYBOOK_FOUNDER.md` — Founder Weekly Routines & Executive Guides
+- `PLAYBOOK_GTM.md` — Role Playbook for Growth, Marketing & Outbound Sales
+- `PLAYBOOK_PRODUCT_CS.md` — Role Playbook for Engineering, Design & Customer Success
+- `PLAYBOOK_OPS.md` — Role Playbook for Operations, Finance & Legal Close
+- `METRICS_INDEX.md` — Single Source of Truth Definitions for Business KPIs
+- `ONBOARDING.md` — 30-60-90 Day Employee Onboarding & Security Offboarding
+- `OS_ADOPTION.md` — OS Internal Launch Strategy & 30-60-90 Day Milestones
+- `OS_FEEDBACK.md` — Feedback Channels & Quarterly OS Maintenance Sessions
+- `OS_KAIZEN.md` — Continuous Improvement Pillars & `os_experiment` Framework
+- `OS_METRICS.md` — OS Health Dashboard & Effectiveness Benchmarks
+- `MILESTONES.md` — Growth Stage Gates & Stage Exit Criteria
+- `README_GOVERNANCE.md` & `OS_VERSIONING.md` — Document Governance & Change Management
+
+---
+
 ## 🚀 How to Run the Project Locally
 
 Because AttendFlow is built with clean semantic HTML, modular CSS, and vanilla JavaScript ES modules, you can launch it in multiple simple ways:

@@ -11,7 +11,8 @@ import {
   initRippleEffect,
   initDashboardInteractivePreview,
   initFeedbackWidget,
-  initShareButton
+  initShareButton,
+  initSalesViewMode
 } from './components.js';
 
 import {
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDashboardInteractivePreview();
   initFeedbackWidget();
   initShareButton();
+  initSalesViewMode();
 
   // Initialize Scroll & Visual Animations
   initScrollReveal();

@@ -1,8 +1,28 @@
 /**
- * AttendFlow - Structured Content Store
- * CMS-Ready data structures for FAQs, Use Cases, Features, and Testimonials.
+ * AttendFlow - Structured Content Store & Localization Layer
+ * CMS-Ready data structures for FAQs, Use Cases, Features, Integrations, and i18n Locales.
  * Non-developers can easily add or edit content items here.
  */
+
+export const I18N_CONFIG = {
+  defaultLocale: 'en-US',
+  supportedLocales: ['en-US', 'en-GB', 'en-PK', 'es-ES'],
+  currencies: {
+    'en-US': { symbol: '$', code: 'USD' },
+    'en-GB': { symbol: '£', code: 'GBP' },
+    'en-PK': { symbol: 'PKR ', code: 'PKR' },
+    'es-ES': { symbol: '€', code: 'EUR' }
+  }
+};
+
+export const INTEGRATIONS_DATA = [
+  { name: 'Rippling', category: 'Payroll & HRIS', status: 'Live 1-Click CSV', icon: '⚡' },
+  { name: 'Gusto', category: 'Payroll', status: 'Live 1-Click CSV', icon: '📄' },
+  { name: 'Quickbooks', category: 'Accounting', status: 'Live XML Export', icon: '📊' },
+  { name: 'Slack', category: 'Notifications', status: 'Q3 2026 Integration', icon: '💬' },
+  { name: 'Microsoft Teams', category: 'Notifications', status: 'Q3 2026 Integration', icon: '👥' },
+  { name: 'Jira Software', category: 'Sprint Alignment', status: 'Q4 2026 Integration', icon: '🚀' }
+];
 
 export const USE_CASES_DATA = [
   {
