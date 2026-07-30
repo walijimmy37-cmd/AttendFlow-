@@ -6,6 +6,26 @@
   <title>AttendFlow - Modern Workforce & Attendance Management Platform</title>
   <meta name="description" content="AttendFlow simplifies employee management, attendance tracking, leave requests, shift scheduling, and workforce analytics for growing teams and enterprises." />
   
+  <!-- SEO & Social Open Graph Meta Tags -->
+  <meta property="og:title" content="AttendFlow - Modern Workforce & Attendance Management" />
+  <meta property="og:description" content="Replace messy spreadsheets with 1-click attendance tracking, automated leave requests, and payroll-ready CSV exports." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://attendflow.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AttendFlow - Modern Workforce Operations" />
+  <meta name="twitter:description" content="Workforce and attendance management for growing teams. 14-day free trial." />
+
+  <!-- Analytics Script Insertion Placeholder (GA4 / Plausible) -->
+  <!-- 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
   <!-- CSS Architecture -->
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/theme.css" />
@@ -276,6 +296,91 @@
   </section>
 
   <!-- ==========================================================================
+       3B. SAMPLE USE CASES & WORKFORCE SCENARIOS
+       ========================================================================== -->
+  <section class="section" id="use-cases">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Tailored Solutions</span>
+        <h2 class="section-title">Built for the Way Your Team Actually Works</h2>
+        <p class="section-description">
+          Whether managing remote engineers, shift-based call centers, or client-focused agencies, AttendFlow adapts seamlessly.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-xl">
+        <!-- Use Case 1 -->
+        <div class="use-case-card reveal">
+          <div class="flex items-center justify-between mb-sm">
+            <span class="use-case-badge">💻 Hybrid & Remote Tech</span>
+            <span class="text-muted text-xs font-semibold">Engineering Teams</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">Hybrid Software & Tech Teams</h3>
+          <p class="text-muted" style="font-size: 0.875rem;">Flexible hours, async check-ins, and IP-verified developer rosters.</p>
+          
+          <div class="use-case-bullet-list">
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Automated web clock-in synced with IP whitelist boundaries</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Async daily standup attendance logging with core hours tracking</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Flexible PTO balances integrated with sprint release schedules</div>
+          </div>
+          <a class="use-case-link" data-dept-select="engineering">See Engineering Roster →</a>
+        </div>
+
+        <!-- Use Case 2 -->
+        <div class="use-case-card reveal delay-100">
+          <div class="flex items-center justify-between mb-sm">
+            <span class="use-case-badge" style="background: rgba(245, 158, 11, 0.15); color: #D97706;">🎧 24/7 Operations</span>
+            <span class="text-muted text-xs font-semibold">Call Centers & BPO</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">Call Centers & BPO Operations</h3>
+          <p class="text-muted" style="font-size: 0.875rem;">Multi-shift rotations, floor availability maps, and automated grace periods.</p>
+          
+          <div class="use-case-bullet-list">
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Rotational morning, evening, and graveyard shift scheduling</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Real-time floor presence map showing active vs break agents</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Automated tardiness alerts sent via SMS/Email to shift supervisors</div>
+          </div>
+          <a class="use-case-link" data-dept-select="support">Inspect Support Roster →</a>
+        </div>
+
+        <!-- Use Case 3 -->
+        <div class="use-case-card reveal delay-200">
+          <div class="flex items-center justify-between mb-sm">
+            <span class="use-case-badge" style="background: rgba(16, 185, 129, 0.15); color: #059669;">🚀 Billable Services</span>
+            <span class="text-muted text-xs font-semibold">Agencies & Consultancies</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">Agencies & Professional Services</h3>
+          <p class="text-muted" style="font-size: 0.875rem;">Client billable hours, project rosters, and monthly payroll CSV exports.</p>
+          
+          <div class="use-case-bullet-list">
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Client project tagging on employee check-in logs</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Automated PTO accruals and leave approval workflows</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> One-click payroll CSV export compatible with Rippling & Gusto</div>
+          </div>
+          <a class="use-case-link" data-dept-select="sales">View Sales Roster →</a>
+        </div>
+
+        <!-- Use Case 4 -->
+        <div class="use-case-card reveal delay-300">
+          <div class="flex items-center justify-between mb-sm">
+            <span class="use-case-badge" style="background: rgba(139, 92, 246, 0.15); color: #7C3AED;">🏥 Multi-Site Operations</span>
+            <span class="text-muted text-xs font-semibold">Retail & Healthcare</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">Multi-Location Retail & Healthcare</h3>
+          <p class="text-muted" style="font-size: 0.875rem;">Geofenced mobile punch-in and tablet kiosk mode for site workers.</p>
+          
+          <div class="use-case-bullet-list">
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Geofenced mobile app punch-in for field staff & site workers</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Peer-to-peer shift swap approval flows for emergency coverage</div>
+            <div class="use-case-bullet"><span class="use-case-bullet-icon">✓</span> Regulatory break and overtime audit logs for HR compliance</div>
+          </div>
+          <a class="use-case-link" data-dept-select="operations">View Operations Roster →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        4. WHY ATTENDFLOW (PROBLEM VS SOLUTION)
        ========================================================================== -->
   <section class="section" id="solutions">
@@ -538,8 +643,16 @@
           </div>
         </div>
 
-        <!-- Sample Interactive Table -->
-        <div style="overflow-x: auto; padding: var(--space-md);">
+        <!-- Report Navigation Tabs -->
+        <div class="report-tabs" role="tablist">
+          <button class="report-tab-btn active" data-target-view="viewOverview" role="tab" aria-selected="true">📋 Live Daily Roster</button>
+          <button class="report-tab-btn" data-target-view="viewAttendance" role="tab" aria-selected="false">📊 Monthly Breakdown</button>
+          <button class="report-tab-btn" data-target-view="viewExceptions" role="tab" aria-selected="false">⚠️ Late & Absent Log</button>
+          <button class="report-tab-btn" data-target-view="viewExports" role="tab" aria-selected="false">📥 Exports & Payroll</button>
+        </div>
+
+        <!-- PANEL 1: Live Overview Roster -->
+        <div id="viewOverview" class="dashboard-view-panel active" style="overflow-x: auto; padding: var(--space-md);">
           <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem;">
             <thead>
               <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-text-muted);">
@@ -611,6 +724,144 @@
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- PANEL 2: Monthly Breakdown Report -->
+        <div id="viewAttendance" class="dashboard-view-panel" style="overflow-x: auto; padding: var(--space-md);">
+          <div class="grid grid-cols-3 gap-md mb-md">
+            <div class="card" style="padding: 12px;">
+              <div class="text-xs text-muted font-semibold">Monthly Avg Attendance</div>
+              <div class="font-bold text-primary" style="font-size: 1.5rem;">98.4%</div>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div class="text-xs text-muted font-semibold">Total Work Hours Logged</div>
+              <div class="font-bold text-accent" style="font-size: 1.5rem;">24,850 hrs</div>
+            </div>
+            <div class="card" style="padding: 12px;">
+              <div class="text-xs text-muted font-semibold">Overtime Ratio</div>
+              <div class="font-bold text-warning" style="font-size: 1.5rem;">2.1%</div>
+            </div>
+          </div>
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-text-muted);">
+                <th style="padding: 10px;">Department</th>
+                <th style="padding: 10px;">Headcount</th>
+                <th style="padding: 10px;">Scheduled Hrs</th>
+                <th style="padding: 10px;">Logged Hrs</th>
+                <th style="padding: 10px;">Punctuality Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px; font-weight: 600;">Engineering</td>
+                <td style="padding: 10px;">42 staff</td>
+                <td style="padding: 10px;">6,720 hrs</td>
+                <td style="padding: 10px;">6,680 hrs</td>
+                <td style="padding: 10px;"><span class="badge badge-green">99.4%</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px; font-weight: 600;">Customer Support</td>
+                <td style="padding: 10px;">54 staff</td>
+                <td style="padding: 10px;">8,640 hrs</td>
+                <td style="padding: 10px;">8,590 hrs</td>
+                <td style="padding: 10px;"><span class="badge badge-green">98.1%</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px; font-weight: 600;">Sales & Growth</td>
+                <td style="padding: 10px;">28 staff</td>
+                <td style="padding: 10px;">4,480 hrs</td>
+                <td style="padding: 10px;">4,410 hrs</td>
+                <td style="padding: 10px;"><span class="badge" style="background: var(--color-warning-light); color: var(--color-warning);">96.2%</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px; font-weight: 600;">Operations & HR</td>
+                <td style="padding: 10px;">18 staff</td>
+                <td style="padding: 10px;">2,880 hrs</td>
+                <td style="padding: 10px;">2,870 hrs</td>
+                <td style="padding: 10px;"><span class="badge badge-green">99.1%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PANEL 3: Late & Absent Exception Log -->
+        <div id="viewExceptions" class="dashboard-view-panel" style="overflow-x: auto; padding: var(--space-md);">
+          <div class="flex items-center justify-between mb-md">
+            <div>
+              <h4 style="font-size: 1rem; font-weight: 700;">Exception Log & Grace Period Usage</h4>
+              <p class="text-xs text-muted">Automatically flagged punctuality breaches for supervisor review</p>
+            </div>
+            <button class="btn btn-secondary btn-sm" data-action="export-report" data-format="exceptions">Export Exceptions List</button>
+          </div>
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.875rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-text-muted);">
+                <th style="padding: 10px;">Date</th>
+                <th style="padding: 10px;">Employee</th>
+                <th style="padding: 10px;">Scheduled In</th>
+                <th style="padding: 10px;">Actual In</th>
+                <th style="padding: 10px;">Variance</th>
+                <th style="padding: 10px;">Reason / Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px;">Today</td>
+                <td style="padding: 10px; font-weight: 600;">Marcus Johnson</td>
+                <td style="padding: 10px;">09:00 AM</td>
+                <td style="padding: 10px;">09:18 AM</td>
+                <td style="padding: 10px; color: var(--color-warning); font-weight: 600;">+18 mins</td>
+                <td style="padding: 10px;"><span class="badge badge-warning">Grace Approved</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px;">Yesterday</td>
+                <td style="padding: 10px; font-weight: 600;">David Miller</td>
+                <td style="padding: 10px;">08:30 AM</td>
+                <td style="padding: 10px;">08:42 AM</td>
+                <td style="padding: 10px; color: var(--color-warning); font-weight: 600;">+12 mins</td>
+                <td style="padding: 10px;"><span class="badge badge-warning">Grace Approved</span></td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 10px;">Jul 27</td>
+                <td style="padding: 10px; font-weight: 600;">Sophia Alva</td>
+                <td style="padding: 10px;">09:00 AM</td>
+                <td style="padding: 10px;">—</td>
+                <td style="padding: 10px; color: var(--color-danger); font-weight: 600;">Full Day</td>
+                <td style="padding: 10px;"><span class="badge badge-primary">Approved PTO</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- PANEL 4: Exports & Payroll Integration -->
+        <div id="viewExports" class="dashboard-view-panel" style="padding: var(--space-xl);">
+          <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+            <div style="font-size: 2.5rem; margin-bottom: var(--space-xs);">📊</div>
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 6px;">Payroll & Attendance Export Hub</h4>
+            <p class="text-muted" style="font-size: 0.875rem; margin-bottom: var(--space-lg);">
+              Generate instant, audit-ready CSV, XML, or PDF exports pre-formatted for Rippling, Gusto, Deel, Quickbooks, and ADP.
+            </p>
+
+            <div class="grid grid-cols-3 gap-md mb-lg">
+              <button class="btn btn-secondary flex-col items-center justify-center gap-xs" style="padding: 16px;" data-action="export-report" data-format="csv">
+                <span style="font-size: 1.25rem;">📄</span>
+                <span style="font-weight: 700;">Download CSV</span>
+                <span class="text-xs text-muted">Standard Payroll</span>
+              </button>
+              <button class="btn btn-secondary flex-col items-center justify-center gap-xs" style="padding: 16px;" data-action="export-report" data-format="xml">
+                <span style="font-size: 1.25rem;">📁</span>
+                <span style="font-weight: 700;">Payroll XML</span>
+                <span class="text-xs text-muted">ERP Integration</span>
+              </button>
+              <button class="btn btn-secondary flex-col items-center justify-center gap-xs" style="padding: 16px;" data-action="export-report" data-format="audit">
+                <span style="font-size: 1.25rem;">🔒</span>
+                <span style="font-weight: 700;">Audit Trail</span>
+                <span class="text-xs text-muted">HR Compliance</span>
+              </button>
+            </div>
+            <p class="text-xs text-muted">🔒 All exports are encrypted using 256-bit SHA authentication before download.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1207,41 +1458,87 @@
   <!-- ==========================================================================
        DEMO REQUEST MODAL POPUP
        ========================================================================== -->
-  <div class="modal-overlay" id="demoModal">
+  <div class="modal-overlay" id="demoModal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
     <div class="modal-card">
       <div class="flex items-center justify-between mb-md">
-        <h3 style="font-size: 1.5rem; font-weight: 800;">Get Started With AttendFlow</h3>
-        <button id="closeModalBtn" style="font-size: 1.5rem; cursor: pointer; color: var(--color-text-muted);">&times;</button>
+        <h3 id="modalTitle" style="font-size: 1.5rem; font-weight: 800;">Get Started With AttendFlow</h3>
+        <button id="closeModalBtn" aria-label="Close modal dialog" style="font-size: 1.5rem; cursor: pointer; color: var(--color-text-muted);">&times;</button>
       </div>
-      <p class="text-muted mb-lg" style="font-size: 0.9375rem;">
+      <p id="modalDesc" class="text-muted mb-lg" style="font-size: 0.9375rem;">
         Fill in your details to get instant 14-day demo access to the AttendFlow workforce platform.
       </p>
 
+      <!-- Active Form -->
       <form id="demoForm" class="flex flex-col gap-md">
         <div>
-          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Full Name</label>
+          <label for="demoName" style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Full Name *</label>
           <input type="text" id="demoName" placeholder="e.g. Alex Mercer" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);" />
         </div>
 
         <div>
-          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Work Email</label>
+          <label for="demoEmail" style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Work Email *</label>
           <input type="email" id="demoEmail" placeholder="alex@company.com" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);" />
         </div>
 
         <div>
-          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Company Size</label>
-          <select style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);">
-            <option>1 - 15 Employees</option>
-            <option>16 - 50 Employees</option>
-            <option>51 - 200 Employees</option>
-            <option>200+ Employees</option>
-          </select>
+          <button type="button" class="toggle-more-fields-btn" id="toggleMoreFieldsBtn">
+            ✨ Tell us a bit more (Optional)
+          </button>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg w-full mt-sm btn-glow">
+        <div id="optionalFieldsContainer" class="modal-optional-fields" style="display: none;">
+          <div>
+            <label for="demoCompany" style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Company Name</label>
+            <input type="text" id="demoCompany" placeholder="e.g. Nexus Tech Studios" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);" />
+          </div>
+
+          <div>
+            <label for="demoTeamSize" style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Team Size</label>
+            <select id="demoTeamSize" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);">
+              <option>1 - 15 Employees</option>
+              <option>16 - 50 Employees</option>
+              <option>51 - 200 Employees</option>
+              <option>200+ Employees</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="demoUseCase" style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;">Primary Operations Need</label>
+            <select id="demoUseCase" style="width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg);">
+              <option>Attendance & Clock-in Tracking</option>
+              <option>Shift & Roster Scheduling</option>
+              <option>Leave & PTO Approvals</option>
+              <option>Payroll CSV Export</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-full mt-sm btn-glow" data-track="lead_form_submit">
           Access Demo Workspace →
         </button>
       </form>
+
+      <!-- Success State -->
+      <div id="modalSuccessState" class="modal-success-state" style="display: none;">
+        <div class="modal-success-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 6px;">Demo Workspace Ready!</h4>
+        <p class="text-muted text-sm mb-md">
+          We've created your temporary sandbox instance and dispatched access instructions to <strong id="successUserEmail" class="text-primary">your email</strong>.
+        </p>
+
+        <div class="card text-left mb-lg" style="padding: 14px; background: var(--color-bg-alt); border-radius: var(--radius-md);">
+          <div class="font-semibold text-xs text-muted mb-xs uppercase" style="letter-spacing: 0.05em;">Next Steps</div>
+          <div class="text-xs mb-xs">1. Check your inbox for temporary credentials</div>
+          <div class="text-xs mb-xs">2. Explore pre-loaded sample employee rosters</div>
+          <div class="text-xs">3. Test 1-click CSV exports with your payroll setup</div>
+        </div>
+
+        <button type="button" id="modalResetBtn" class="btn btn-secondary btn-sm w-full">
+          Submit Another Request
+        </button>
+      </div>
     </div>
   </div>
 

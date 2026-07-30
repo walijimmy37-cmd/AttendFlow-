@@ -1,6 +1,6 @@
 # AttendFlow - Modern Workforce & Attendance Management SaaS
 
-AttendFlow is a modern, high-conversion B2B SaaS landing page and interactive product showcase built for workforce management, employee tracking, leave management, and operational analytics.
+AttendFlow is a modern, high-conversion B2B SaaS landing page and interactive workforce management preview built for employee tracking, leave management, shift scheduling, and operational analytics.
 
 ---
 
@@ -8,15 +8,18 @@ AttendFlow is a modern, high-conversion B2B SaaS landing page and interactive pr
 
 Because AttendFlow is built with clean semantic HTML, modular CSS, and vanilla JavaScript ES modules, you can launch it in multiple simple ways:
 
-### Option 1: Direct File Access (Browser)
-Simply double-click `index.html` or open it in any modern browser (Chrome, Safari, Firefox, Edge).
-
-### Option 2: Vite Local Server (Recommended for Development)
+### Option 1: Vite Local Server (Recommended for Development)
 ```bash
 npm install
 npm run dev
 ```
 Open `http://localhost:3000` in your browser.
+
+### Option 2: Direct Production Build Execution
+```bash
+npm run build
+npm start
+```
 
 ---
 
@@ -25,39 +28,73 @@ Open `http://localhost:3000` in your browser.
 ```text
 attendflow-landing/
 ├─ index.html          # Main semantic HTML5 landing page & interactive preview
+├─ CHANGELOG.md        # Version history & production release updates
+├─ README.md           # Project documentation, developer handoff & analytics guide
 ├─ css/
-│  ├─ base.css         # Resets, CSS variables, typography standards, spacing math
-│  ├─ components.css   # Buttons, cards, navbar, hero dashboard mockup, pricing, timeline
+│  ├─ base.css         # Resets, CSS variables, typography standards, prefers-reduced-motion
+│  ├─ components.css   # Buttons, cards, navbar, hero dashboard mockup, report tabs, pricing
 │  ├─ layout.css       # Responsive grid system, flex helpers, section containers
 │  ├─ utilities.css    # Spacing utilities, badge themes, scroll reveal initial states
 │  └─ theme.css        # Dark mode variables & glassmorphism overrides
 ├─ js/
-│  ├─ main.js          # Main entry point & component initialization
-│  ├─ animations.js    # IntersectionObserver scroll reveal & animated count-up counters
-│  ├─ components.js    # Dark mode toggle, mobile menu, FAQ accordion, demo modal, toast, pricing switch
-│  └─ utils.js         # Debounce, throttle, DOM selector helpers, number formatters
-└─ README.md           # Project documentation & customization guide
+│  ├─ main.js          # Entry point & component event wiring
+│  ├─ analytics.js     # Lightweight analytics layer (trackEvent, sendBeacon/fetch fallback)
+│  ├─ content.js       # CMS-ready JSON store for FAQs, Use Cases, and Features
+│  ├─ animations.js    # IntersectionObserver scroll reveal & reduced-motion aware counters
+│  ├─ components.js    # Dark mode toggle, mobile menu, report view tabs, lead validation
+│  └─ utils.js         # Debounce, throttle, DOM selector helpers, email validator, experiment reader
 ```
 
 ---
 
-## 🎨 How to Customize
+## 📊 Analytics & Event Tracking Guide
 
-### 1. Colors & Branding
-Modify global CSS variables in `css/base.css` and `css/theme.css`:
+AttendFlow includes a lightweight, production-ready event tracking module (`js/analytics.js`).
 
-```css
-:root {
-  --color-primary: #2563EB;     /* Primary brand color */
-  --color-secondary: #0F172A;   /* Dark brand background */
-  --color-accent: #10B981;      /* Success/accent color */
-  --color-bg: #F8FAFC;          /* Light mode background */
+### Event Payload Structure
+All events automatically log to console in dev mode and post JSON payloads to `/api/track` (or via `navigator.sendBeacon`):
+
+```json
+{
+  "event": "hero_cta_click",
+  "properties": {
+    "cta_type": "free_trial",
+    "location": "hero",
+    "hero_variant": "v1"
+  },
+  "meta": {
+    "session_id": "sess_x82f1k9_1772349000000",
+    "timestamp": "2026-07-30T14:50:00.000Z",
+    "url": "https://attendflow.io/?hero=v1"
+  }
 }
 ```
 
-### 2. Fonts & Typography
-Update `--font-sans` in `css/base.css` to swap in custom Google Fonts (such as Inter, Plus Jakarta Sans, or Outfit).
+### Main Tracked Events
+- `page_view`: Fired automatically on page load.
+- `hero_cta_click`: Fired on primary hero button interactions.
+- `lead_form_submit`: Fired when users request a demo or trial access.
+- `report_tab_change`: Fired when switching mockup views (Roster, Monthly, Exceptions, Exports).
+- `report_export_click`: Fired on CSV/XML export triggers.
+- `pricing_toggle_change`: Fired when toggling annual vs monthly pricing.
+- `faq_open`: Fired when expanding FAQ accordion items.
 
-### 3. Copywriting & Pricing Tiers
-- Edit pricing amounts and features inside `#pricing` in `index.html`.
-- Modify initial counter values using `data-counter="99.8"` attributes on HTML elements.
+---
+
+## 🧪 A/B Testing & Variant Foundations
+
+You can test different visual variants using URL query parameters:
+- `?hero=v2`: Activates alternate hero experiment tag.
+- `?pricing=annual`: Sets default pricing toggle state.
+- `?cta=book`: Alters CTA tracking tag.
+
+Variants are read via `getExperimentVariant()` in `js/utils.js` and cached in `localStorage`.
+
+---
+
+## ♿ Accessibility & Performance Targets
+
+AttendFlow is engineered for high performance and WCAG AA compliance:
+- **Lighthouse Targets**: Performance ≥ 92, Accessibility = 100, Best Practices = 100, SEO = 100.
+- **Keyboard Navigation**: Full focus ring support (`:focus-visible`) across all buttons, inputs, tabs, and drawer controls.
+- **Reduced Motion**: Automatically disables scroll reveal delays and frame counting when `prefers-reduced-motion: reduce` is detected.

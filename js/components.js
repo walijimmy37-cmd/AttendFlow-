@@ -1,7 +1,8 @@
 /**
  * AttendFlow - Interactive Components & UI Logic
  */
-import { $, $$ } from './utils.js';
+import { $, $$, validateEmail } from './utils.js';
+import { trackEvent } from './analytics.js';
 
 // --------------------------------------------------------------------------
 // 1. Dark Mode Management
@@ -26,6 +27,7 @@ export function initDarkMode() {
       const isDark = html.classList.contains('dark-mode');
       localStorage.setItem('attendflow_theme', isDark ? 'dark' : 'light');
       showToast(isDark ? '🌙 Switched to Dark Mode' : '☀️ Switched to Light Mode');
+      trackEvent('theme_toggle', { mode: isDark ? 'dark' : 'light' });
     });
   }
 }
@@ -60,6 +62,7 @@ export function initNavigation() {
         mobileMenu.classList.add('open');
         mobileToggle.classList.add('active');
         mobileToggle.setAttribute('aria-expanded', 'true');
+        trackEvent('mobile_menu_open');
       }
     });
 
@@ -68,6 +71,7 @@ export function initNavigation() {
       link.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
         mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -91,7 +95,9 @@ export function initAccordion() {
         accordionItems.forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
+            const otherHeader = otherItem.querySelector('.accordion-header');
             const otherContent = otherItem.querySelector('.accordion-content');
+            if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
             if (otherContent) otherContent.style.maxHeight = '0px';
           }
         });
@@ -99,10 +105,15 @@ export function initAccordion() {
         // Toggle active state
         if (isActive) {
           item.classList.remove('active');
+          header.setAttribute('aria-expanded', 'false');
           content.style.maxHeight = '0px';
         } else {
           item.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
           content.style.maxHeight = content.scrollHeight + 'px';
+
+          const questionText = header.querySelector('span')?.textContent || 'FAQ Item';
+          trackEvent('faq_open', { question_id: item.id || 'faq', question: questionText });
         }
       });
     }
@@ -136,24 +147,36 @@ export function initPricingToggle() {
         if (enterprisePrice) enterprisePrice.textContent = '$99';
         billingCycleLabels.forEach(el => (el.textContent = '/user/mo (billed monthly)'));
       }
+
+      trackEvent('pricing_toggle_change', { billing: isAnnual ? 'annual' : 'monthly' });
     });
   }
 }
 
 // --------------------------------------------------------------------------
-// 5. Demo Modal & Lead Capture
+// 5. Demo Modal & Enhanced Lead Capture
 // --------------------------------------------------------------------------
+let lastLeadSubmitTime = 0;
+
 export function initDemoModal() {
   const modalOverlay = $('#demoModal');
   const closeModalBtn = $('#closeModalBtn');
   const demoForm = $('#demoForm');
   const triggerBtns = $$('[data-modal-target="demoModal"]');
+  const toggleMoreFieldsBtn = $('#toggleMoreFieldsBtn');
+  const optionalFieldsContainer = $('#optionalFieldsContainer');
+  const modalSuccessState = $('#modalSuccessState');
+  const modalResetBtn = $('#modalResetBtn');
 
   // Open modal triggers
   triggerBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      const ctaType = btn.dataset.ctaType || 'book_demo';
+      const location = btn.dataset.location || 'page';
+
       modalOverlay?.classList.add('active');
+      trackEvent('hero_cta_click', { cta_type: ctaType, location: location });
     });
   });
 
@@ -169,19 +192,94 @@ export function initDemoModal() {
     }
   });
 
-  // Handle demo form submission
-  demoForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const emailInput = $('#demoEmail');
-    const nameInput = $('#demoName');
+  // Toggle extra fields
+  if (toggleMoreFieldsBtn && optionalFieldsContainer) {
+    toggleMoreFieldsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isHidden = optionalFieldsContainer.style.display === 'none' || !optionalFieldsContainer.style.display;
+      if (isHidden) {
+        optionalFieldsContainer.style.display = 'block';
+        toggleMoreFieldsBtn.textContent = '▲ Hide optional fields';
+      } else {
+        optionalFieldsContainer.style.display = 'none';
+        toggleMoreFieldsBtn.textContent = '✨ Tell us a bit more (Optional)';
+      }
+    });
+  }
 
-    if (emailInput && nameInput) {
-      const email = emailInput.value;
-      modalOverlay?.classList.remove('active');
-      demoForm.reset();
-      showToast(`✨ Thanks ${nameInput.value}! We sent demo access to ${email}.`);
-    }
-  });
+  // Handle demo form submission
+  if (demoForm) {
+    demoForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Cooldown check (5 seconds)
+      const now = Date.now();
+      if (now - lastLeadSubmitTime < 5000) {
+        showToast('⏳ Please wait a moment before submitting again.', 3000);
+        return;
+      }
+
+      const emailInput = $('#demoEmail');
+      const nameInput = $('#demoName');
+      const companyInput = $('#demoCompany');
+      const teamSizeInput = $('#demoTeamSize');
+      const useCaseInput = $('#demoUseCase');
+
+      if (!nameInput || !nameInput.value.trim()) {
+        showToast('⚠️ Please enter your full name.', 3000);
+        nameInput?.focus();
+        return;
+      }
+
+      if (!emailInput || !validateEmail(emailInput.value)) {
+        showToast('⚠️ Please enter a valid work email address.', 3000);
+        emailInput?.focus();
+        return;
+      }
+
+      lastLeadSubmitTime = now;
+
+      const email = emailInput.value.trim();
+      const name = nameInput.value.trim();
+      const company = companyInput?.value?.trim() || 'N/A';
+      const teamSize = teamSizeInput?.value || '1-15 Employees';
+      const useCase = useCaseInput?.value || 'All of the above';
+
+      // Log Analytics
+      trackEvent('lead_form_submit', {
+        location: 'modal',
+        name,
+        email,
+        company,
+        team_size: teamSize,
+        use_case: useCase
+      });
+
+      // Show Thank You / Success State
+      if (modalSuccessState && demoForm) {
+        demoForm.style.display = 'none';
+        modalSuccessState.style.display = 'block';
+        const userEmailSpan = $('#successUserEmail');
+        if (userEmailSpan) userEmailSpan.textContent = email;
+      } else {
+        modalOverlay?.classList.remove('active');
+        demoForm.reset();
+      }
+
+      showToast(`✨ Welcome ${name}! Demo credentials dispatched to ${email}.`);
+    });
+  }
+
+  // Reset modal state
+  if (modalResetBtn) {
+    modalResetBtn.addEventListener('click', () => {
+      if (modalSuccessState && demoForm) {
+        modalSuccessState.style.display = 'none';
+        demoForm.style.display = 'flex';
+        demoForm.reset();
+      }
+    });
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -227,6 +325,7 @@ export function initBackToTop() {
 
     backBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      trackEvent('back_to_top_click');
     });
   }
 }
@@ -265,7 +364,12 @@ export function initDashboardInteractivePreview() {
   const deptFilterSelect = $('#dashboardDeptFilter');
   const tableRows = $$('.employee-row');
   const chartBars = $$('.interactive-chart-bar');
+  const reportTabs = $$('.report-tab-btn');
+  const reportPanels = $$('.dashboard-view-panel');
+  const exportBtns = $$('[data-action="export-report"]');
+  const useCaseLinks = $$('[data-dept-select]');
 
+  // Department filter
   if (deptFilterSelect) {
     deptFilterSelect.addEventListener('change', (e) => {
       const selectedDept = e.target.value.toLowerCase();
@@ -278,8 +382,40 @@ export function initDashboardInteractivePreview() {
         }
       });
       showToast(`Filtered dashboard view for ${e.target.value}`);
+      trackEvent('dashboard_filter_change', { department: selectedDept });
     });
   }
+
+  // Report view tabs switcher ("Overview", "Attendance", "Late & Absent", "Exports")
+  reportTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.dataset.targetView;
+
+      reportTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      reportPanels.forEach(panel => {
+        if (panel.id === targetId) {
+          panel.style.display = 'block';
+          panel.classList.add('active');
+        } else {
+          panel.style.display = 'none';
+          panel.classList.remove('active');
+        }
+      });
+
+      trackEvent('report_tab_change', { tab_id: targetId });
+    });
+  });
+
+  // Export buttons
+  exportBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const format = btn.dataset.format || 'csv';
+      showToast(`📥 Sample report exported (${format.toUpperCase()} generated)`);
+      trackEvent('report_export_click', { format });
+    });
+  });
 
   // Interactive Chart Bar hover / click tooltips
   chartBars.forEach(bar => {
@@ -287,6 +423,23 @@ export function initDashboardInteractivePreview() {
       const day = bar.dataset.day || 'Day';
       const val = bar.dataset.val || '98%';
       showToast(`📊 ${day}: ${val} attendance rate`);
+      trackEvent('chart_bar_click', { day, value: val });
+    });
+  });
+
+  // Use Case links auto-filtering preview
+  useCaseLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetDept = link.dataset.deptSelect;
+      if (deptFilterSelect) {
+        deptFilterSelect.value = targetDept.toLowerCase();
+        deptFilterSelect.dispatchEvent(new Event('change'));
+      }
+      const previewSection = $('#preview');
+      previewSection?.scrollIntoView({ behavior: 'smooth' });
+      trackEvent('use_case_click', { department: targetDept });
     });
   });
 }
+

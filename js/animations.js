@@ -3,14 +3,16 @@
  */
 import { $$ } from './utils.js';
 
-// --------------------------------------------------------------------------
-// 1. Scroll Reveal via IntersectionObserver
-// --------------------------------------------------------------------------
+/**
+ * Initializes scroll-triggered reveal animations using IntersectionObserver.
+ * Respects user system preference for reduced motion.
+ */
 export function initScrollReveal() {
   const revealElements = $$('.reveal');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (!('IntersectionObserver' in window)) {
-    // Fallback if IntersectionObserver is not supported
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    // Immediately display elements without scroll delays when reduced motion is requested
     revealElements.forEach(el => el.classList.add('active'));
     return;
   }
@@ -33,11 +35,13 @@ export function initScrollReveal() {
   revealElements.forEach(el => observer.observe(el));
 }
 
-// --------------------------------------------------------------------------
-// 2. Animated Numerical Counters
-// --------------------------------------------------------------------------
+/**
+ * Animates key metric numbers counting up when scrolled into view.
+ * Instantly renders target values if reduced motion is enabled.
+ */
 export function initAnimatedCounters() {
   const counterElements = $$('[data-counter]');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (counterElements.length === 0) return;
 
@@ -46,6 +50,12 @@ export function initAnimatedCounters() {
     const prefix = el.getAttribute('data-prefix') || '';
     const suffix = el.getAttribute('data-suffix') || '';
     const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+
+    if (prefersReducedMotion) {
+      el.textContent = `${prefix}${target.toFixed(decimals)}${suffix}`;
+      return;
+    }
+
     const duration = 2000; // ms
     const frameDuration = 1000 / 60; // 60fps
     const totalFrames = Math.round(duration / frameDuration);
@@ -78,3 +88,4 @@ export function initAnimatedCounters() {
 
   counterElements.forEach(el => observer.observe(el));
 }
+

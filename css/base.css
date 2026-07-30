@@ -145,3 +145,24 @@ ul, ol {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * Lighthouse Target Standards for AttendFlow:
+ * - Performance: >= 92
+ * - Accessibility (a11y): 100
+ * - Best Practices: 100
+ * - SEO: 100
+ */
+

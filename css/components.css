@@ -1019,6 +1019,179 @@ html.dark-mode .card-solution {
   color: #FFFFFF;
 }
 
+/* --------------------------------------------------------------------------
+ * Report View Tabs & Dashboard Mockup Views
+ * -------------------------------------------------------------------------- */
+.report-tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 var(--space-md);
+  background: var(--color-bg-alt);
+  overflow-x: auto;
+}
+
+.report-tab-btn {
+  padding: 10px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.report-tab-btn:hover {
+  color: var(--color-text-main);
+}
+
+.report-tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  background: var(--color-bg);
+}
+
+.dashboard-view-panel {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dashboard-view-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+ * Use Case Section Cards
+ * -------------------------------------------------------------------------- */
+.use-case-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: all var(--transition-normal);
+
+  html.dark-mode & {
+    background: var(--color-bg-alt);
+  }
+}
+
+.use-case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
+}
+
+.use-case-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  width: fit-content;
+}
+
+.use-case-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: var(--space-md) 0 var(--space-lg) 0;
+}
+
+.use-case-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--color-text-main);
+}
+
+.use-case-bullet-icon {
+  color: var(--color-accent);
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.use-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  margin-top: auto;
+  cursor: pointer;
+  transition: gap var(--transition-fast);
+}
+
+.use-case-link:hover {
+  gap: 10px;
+  color: var(--color-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+ * Modal Lead Form Enhancements
+ * -------------------------------------------------------------------------- */
+.toggle-more-fields-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  padding: 4px 0;
+  display: inline-block;
+}
+
+.toggle-more-fields-btn:hover {
+  text-decoration: underline;
+}
+
+.modal-optional-fields {
+  border-left: 2px solid var(--color-primary-light);
+  padding-left: var(--space-md);
+  margin-top: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.modal-success-state {
+  text-align: center;
+  padding: var(--space-lg) var(--space-xs);
+}
+
+.modal-success-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md) auto;
+}
+
+
+.footer-link:hover {
+  color: #FFFFFF;
+}
+
 .social-icons {
   display: flex;
   gap: var(--space-md);

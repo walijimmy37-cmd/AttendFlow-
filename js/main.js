@@ -17,8 +17,13 @@ import {
   initAnimatedCounters
 } from './animations.js';
 
+import { initAnalytics } from './analytics.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('🚀 AttendFlow Landing Site Initialized');
+  console.log('🚀 AttendFlow Landing Site Initialized v3.4');
+
+  // Initialize Event Instrumentation & Analytics
+  initAnalytics();
 
   // Initialize UI Components
   initDarkMode();
@@ -34,3 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initAnimatedCounters();
 });
+

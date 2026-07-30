@@ -40,3 +40,36 @@ export function $(selector, scope = document) {
 export function $$(selector, scope = document) {
   return Array.from(scope.querySelectorAll(selector));
 }
+
+/**
+ * Validates email format using standard RFC 5322 regex pattern
+ * @param {string} email
+ * @returns {boolean}
+ */
+export function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(String(email).toLowerCase().trim());
+}
+
+/**
+ * Reads experiment variant from URL query param (e.g. ?hero=v2) or localStorage
+ * @param {string} experimentName - e.g. 'hero', 'pricing', 'cta'
+ * @param {string} defaultValue - e.g. 'v1'
+ * @returns {string} active variant identifier
+ */
+export function getExperimentVariant(experimentName, defaultValue = 'v1') {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramVal = urlParams.get(experimentName);
+    if (paramVal) {
+      localStorage.setItem(`exp_${experimentName}`, paramVal);
+      return paramVal;
+    }
+    const storedVal = localStorage.getItem(`exp_${experimentName}`);
+    if (storedVal) return storedVal;
+  } catch (e) {
+    // Graceful fallback
+  }
+  return defaultValue;
+}
+
