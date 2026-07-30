@@ -326,15 +326,26 @@ html.dark-mode .card-icon {
   padding-top: calc(var(--nav-height) + var(--space-3xl));
   padding-bottom: var(--space-3xl);
   background: radial-gradient(100% 100% at 50% 0%, rgba(37, 99, 235, 0.08) 0%, rgba(248, 250, 252, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 html.dark-mode .hero-section {
   background: radial-gradient(100% 100% at 50% 0%, rgba(37, 99, 235, 0.15) 0%, rgba(3, 7, 18, 0) 100%);
 }
 
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-xs);
   padding: 6px 14px;
   background: var(--color-bg-alt);
@@ -344,6 +355,8 @@ html.dark-mode .hero-section {
   font-weight: 600;
   color: var(--color-text-main);
   box-shadow: var(--shadow-sm);
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--space-lg);
 }
 
@@ -352,8 +365,12 @@ html.dark-mode .hero-section {
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.035em;
-  margin-bottom: var(--space-lg);
   max-width: 860px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-lg);
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -372,8 +389,12 @@ html.dark-mode .hero-section {
   font-size: 1.25rem;
   color: var(--color-text-muted);
   max-width: 680px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--space-2xl);
   line-height: 1.6;
+  text-align: center;
 }
 
 .hero-cta-group {
@@ -382,12 +403,18 @@ html.dark-mode .hero-section {
   align-items: center;
   justify-content: center;
   gap: var(--space-md);
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--space-3xl);
+  width: 100%;
 }
 
 /* Simulated Dashboard Mockup (HTML/CSS purely) */
 .mockup-window {
   width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   background: var(--color-bg-alt);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
