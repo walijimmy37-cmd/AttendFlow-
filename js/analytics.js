@@ -5,10 +5,31 @@
  */
 import { getExperimentVariant } from './utils.js';
 
+/**
+ * Detects current execution environment (development vs production)
+ * @returns {string} 'development' | 'production'
+ */
+function getEnvironment() {
+  const host = window.location.hostname;
+  if (
+    host === 'localhost' ||
+    host === '127.0.0.1' ||
+    host.endsWith('.local') ||
+    host.includes('ais-dev') ||
+    host.includes('webcontainer')
+  ) {
+    return 'development';
+  }
+  return 'production';
+}
+
+const IS_DEV = getEnvironment() === 'development';
+
 // Analytics Configuration
 const ANALYTICS_CONFIG = {
-  endpoint: '/api/track',
-  debug: true, // Logs to console in development mode
+  endpoint: window.ATTENDFLOW_ANALYTICS_ENDPOINT || '/api/track',
+  environment: getEnvironment(),
+  debug: IS_DEV, // Always debug in dev environment
   appName: 'AttendFlow',
   appVersion: '3.4.0'
 };

@@ -277,13 +277,111 @@ export function initDemoModal() {
         modalSuccessState.style.display = 'none';
         demoForm.style.display = 'flex';
         demoForm.reset();
+        const surveyForm = $('#modalSurveyForm');
+        if (surveyForm) surveyForm.reset();
+      }
+    });
+  }
+
+  // Handle optional survey submission inside modal success state
+  const surveyForm = $('#modalSurveyForm');
+  if (surveyForm) {
+    surveyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const selectedPainPoint = $('input[name="painPoint"]:checked', surveyForm)?.value || 'Not specified';
+      const comment = $('#surveyComment', surveyForm)?.value?.trim() || '';
+
+      trackEvent('lead_survey_submit', {
+        pain_point: selectedPainPoint,
+        comment: comment
+      });
+
+      showToast('🎉 Thank you for sharing your feedback! We will customize your demo accordingly.');
+      const surveyBox = $('#modalSurveyBox');
+      if (surveyBox) {
+        surveyBox.innerHTML = '<div class="text-xs text-center text-accent font-semibold py-xs">✓ Feedback received! Your insights help us build a better workforce tool.</div>';
       }
     });
   }
 }
 
 // --------------------------------------------------------------------------
-// 6. Toast Notification System
+// 6. On-Page Feedback Widget
+// --------------------------------------------------------------------------
+export function initFeedbackWidget() {
+  const feedbackContainer = $('#feedbackWidget');
+  if (!feedbackContainer) return;
+
+  const yesBtn = $('#feedbackYesBtn');
+  const noBtn = $('#feedbackNoBtn');
+  const commentForm = $('#feedbackCommentForm');
+  const submitCommentBtn = $('#submitFeedbackCommentBtn');
+  const commentInput = $('#feedbackCommentInput');
+
+  let selectedVote = null;
+
+  const handleVote = (isHelpful) => {
+    selectedVote = isHelpful ? 'helpful' : 'not_helpful';
+    trackEvent('page_feedback', { rating: selectedVote, location: 'footer_widget' });
+    
+    showToast(isHelpful ? '👍 Thanks for your feedback!' : '🙏 Thank you! We will use this to improve.');
+    
+    if (commentForm) {
+      commentForm.style.display = 'block';
+    } else {
+      feedbackContainer.innerHTML = '<span class="text-xs text-muted font-semibold">✓ Thanks for making AttendFlow better!</span>';
+    }
+  };
+
+  yesBtn?.addEventListener('click', () => handleVote(true));
+  noBtn?.addEventListener('click', () => handleVote(false));
+
+  submitCommentBtn?.addEventListener('click', () => {
+    const comment = commentInput?.value?.trim() || '';
+    if (comment) {
+      trackEvent('page_feedback_comment', { rating: selectedVote, comment });
+      showToast('✨ Comment received! Thank you.');
+    }
+    feedbackContainer.innerHTML = '<span class="text-xs text-muted font-semibold">✓ Feedback submitted. Thank you!</span>';
+  });
+}
+
+// --------------------------------------------------------------------------
+// 7. Share Demo & Referral Launcher
+// --------------------------------------------------------------------------
+export function initShareButton() {
+  const shareBtns = $$('[data-action="share-demo"]');
+
+  shareBtns.forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const shareData = {
+        title: 'AttendFlow - Modern Workforce Management',
+        text: 'Check out AttendFlow: 1-click attendance tracking, automated leave requests, and payroll-ready CSV exports!',
+        url: window.location.origin + window.location.pathname
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+          trackEvent('share_click', { method: 'native' });
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(shareData.url);
+          showToast('🔗 Shareable link copied to clipboard!');
+          trackEvent('share_click', { method: 'clipboard' });
+        } else {
+          showToast(`🔗 Share URL: ${shareData.url}`);
+          trackEvent('share_click', { method: 'prompt' });
+        }
+      } catch (err) {
+        // Quiet fallback on cancel or permission denial
+      }
+    });
+  });
+}
+
+// --------------------------------------------------------------------------
+// 8. Toast Notification System
 // --------------------------------------------------------------------------
 export function showToast(message, duration = 3500) {
   let toastContainer = $('#toastContainer');

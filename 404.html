@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Page Not Found - AttendFlow</title>
+  <meta name="robots" content="noindex, follow" />
+  
+  <!-- CSS Architecture -->
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/theme.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/utilities.css" />
+  
+  <style>
+    .notfound-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--color-bg);
+      color: var(--color-text-main);
+    }
+    .notfound-card {
+      max-width: 520px;
+      margin: var(--space-3xl) auto;
+      text-align: center;
+      padding: var(--space-2xl) var(--space-xl);
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-2xl);
+      box-shadow: var(--shadow-xl);
+    }
+    .notfound-code {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: var(--space-xs);
+    }
+  </style>
+</head>
+<body>
+  <div class="notfound-wrapper">
+    <!-- Header Logo -->
+    <header class="navbar" style="position: relative; border-bottom: 1px solid var(--color-border);">
+      <div class="container flex items-center justify-between">
+        <a href="/" class="nav-logo" aria-label="AttendFlow Homepage">
+          <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+          </div>
+          <span>Attend<strong>Flow</strong></span>
+        </a>
+        <a href="/" class="btn btn-secondary btn-sm">← Back to Site</a>
+      </div>
+    </header>
+
+    <!-- Main 404 Content -->
+    <main class="container">
+      <div class="notfound-card reveal active">
+        <div class="notfound-code">404</div>
+        <h1 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 8px;">Page Not Found</h1>
+        <p class="text-muted text-sm mb-lg">
+          The page or roster view you are looking for has been moved, renamed, or no longer exists.
+        </p>
+
+        <div class="card text-left mb-lg" style="padding: 16px; background: var(--color-bg); border-radius: var(--radius-lg);">
+          <div class="font-semibold text-xs text-muted mb-xs uppercase" style="letter-spacing: 0.05em;">Popular Destinations</div>
+          <div class="flex flex-col gap-xs text-sm">
+            <a href="/#preview" class="text-primary hover:underline flex items-center gap-xs">👉 Live Attendance Dashboard Preview</a>
+            <a href="/#use-cases" class="text-primary hover:underline flex items-center gap-xs">👉 Workforce Use Cases & Roster Templates</a>
+            <a href="/#pricing" class="text-primary hover:underline flex items-center gap-xs">👉 Pricing Plans & Free Trial</a>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-md">
+          <a href="/" class="btn btn-primary btn-md btn-glow">Return to Homepage</a>
+          <button onclick="history.back()" class="btn btn-secondary btn-md">Go Back</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: var(--space-md) 0; text-align: center; border-top: 1px solid var(--color-border);">
+      <div class="container text-xs text-muted">
+        © 2026 AttendFlow Inc. All rights reserved. • Need assistance? <a href="mailto:support@attendflow.io" class="text-primary hover:underline">Contact Support</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

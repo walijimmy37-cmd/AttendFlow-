@@ -9,7 +9,9 @@ import {
   initDemoModal,
   initBackToTop,
   initRippleEffect,
-  initDashboardInteractivePreview
+  initDashboardInteractivePreview,
+  initFeedbackWidget,
+  initShareButton
 } from './components.js';
 
 import {
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initRippleEffect();
   initDashboardInteractivePreview();
+  initFeedbackWidget();
+  initShareButton();
 
   // Initialize Scroll & Visual Animations
   initScrollReveal();

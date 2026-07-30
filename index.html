@@ -67,6 +67,7 @@
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
 
+        <button class="btn btn-secondary btn-sm" data-action="share-demo" title="Share AttendFlow demo with colleagues">🔗 Share Demo</button>
         <button class="btn btn-secondary btn-sm" data-modal-target="demoModal">Sign In</button>
         <button class="btn btn-primary btn-sm" data-modal-target="demoModal">Book Demo</button>
 
@@ -1446,6 +1447,21 @@
 
       <div class="flex flex-wrap items-center justify-between" style="border-top: 1px solid #1E293B; padding-top: var(--space-lg); font-size: 0.8125rem;">
         <div>© 2026 AttendFlow Inc. All rights reserved.</div>
+        
+        <!-- On-Page Feedback Widget -->
+        <div id="feedbackWidget" class="flex items-center gap-xs" style="background: rgba(255, 255, 255, 0.05); padding: 4px 12px; border-radius: var(--radius-full);">
+          <span class="text-xs text-muted">Was this page helpful?</span>
+          <button id="feedbackYesBtn" class="btn btn-secondary btn-sm" style="padding: 2px 8px; font-size: 0.75rem;">👍 Yes</button>
+          <button id="feedbackNoBtn" class="btn btn-secondary btn-sm" style="padding: 2px 8px; font-size: 0.75rem;">👎 No</button>
+        </div>
+
+        <div id="feedbackCommentForm" style="display: none; width: 100%; margin-top: 8px;">
+          <div class="flex gap-xs">
+            <input type="text" id="feedbackCommentInput" placeholder="What could we improve?" style="flex: 1; font-size: 0.75rem; padding: 4px 8px; border-radius: var(--radius-md); background: #0F172A; color: #FFF; border: 1px solid #334155;" />
+            <button id="submitFeedbackCommentBtn" class="btn btn-primary btn-sm" style="font-size: 0.75rem; padding: 4px 8px;">Submit</button>
+          </div>
+        </div>
+
         <div class="flex gap-md">
           <a href="#" class="footer-link">Privacy</a>
           <a href="#" class="footer-link">Terms</a>
@@ -1533,6 +1549,33 @@
           <div class="text-xs mb-xs">1. Check your inbox for temporary credentials</div>
           <div class="text-xs mb-xs">2. Explore pre-loaded sample employee rosters</div>
           <div class="text-xs">3. Test 1-click CSV exports with your payroll setup</div>
+        </div>
+
+        <!-- Optional 1-question Survey -->
+        <div id="modalSurveyBox" class="card text-left mb-md" style="padding: 14px; background: var(--color-bg); border: 1px dashed var(--color-primary-light);">
+          <div class="font-semibold text-xs text-primary mb-xs">💡 Quick Question while you wait:</div>
+          <div class="text-xs text-muted mb-xs">What is your biggest current headache with attendance & workforce ops?</div>
+          
+          <form id="modalSurveyForm" class="flex flex-col gap-xs">
+            <label class="text-xs flex items-center gap-xs cursor-pointer">
+              <input type="radio" name="painPoint" value="Spreadsheet errors & manual data entry" checked />
+              Spreadsheet errors & manual data entry
+            </label>
+            <label class="text-xs flex items-center gap-xs cursor-pointer">
+              <input type="radio" name="painPoint" value="Unclear shift schedules & late arrivals" />
+              Unclear shift schedules & late arrivals
+            </label>
+            <label class="text-xs flex items-center gap-xs cursor-pointer">
+              <input type="radio" name="painPoint" value="Complex PTO & leave accrual math" />
+              Complex PTO & leave accrual math
+            </label>
+            <label class="text-xs flex items-center gap-xs cursor-pointer">
+              <input type="radio" name="painPoint" value="Lack of remote / mobile check-in verification" />
+              Lack of remote / mobile check-in verification
+            </label>
+            <input type="text" id="surveyComment" placeholder="Any specific feature you need? (Optional)" style="font-size: 0.75rem; padding: 6px 10px; border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-top: 4px;" />
+            <button type="submit" class="btn btn-secondary btn-sm mt-xs text-xs">Submit Answer</button>
+          </form>
         </div>
 
         <button type="button" id="modalResetBtn" class="btn btn-secondary btn-sm w-full">
