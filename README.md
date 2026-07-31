@@ -58,6 +58,19 @@ AttendFlow includes a complete, enterprise-grade business specification system c
 - `MILESTONES.md` — Growth Stage Gates & Stage Exit Criteria
 - `README_GOVERNANCE.md` & `OS_VERSIONING.md` — Document Governance & Change Management
 
+### 🧭 5. Strategic Compass & 3–5 Year Playbook
+- `ATTENDFLOW_CONTRACT.md` — The Founder & Company Operating Contract (2026–2031)
+- `3_5_YEAR_NARRATIVE.md` — Strategic North-Star Narrative & 5-Year Scale Destination
+- `FOCUS.md` — Strategic Themes, Priority Hierarchy & "What We Won't Do" Rules
+- `3_5_YEAR_PRODUCT_MARKET.md` — 3-Phase Product Evolution & Market Expansion Roadmap
+- `FOUNDER_3_5_YEAR.md` — Founder Personal Goals, Health Boundaries & Role Evolution
+- `CULTURE_3_5_YEAR.md` — Scaling Core Values, Talent Density & Remote Hub Structure
+- `FINANCE_LIFESTYLE_3_5_YEAR.md` — 5-Year Financial Trajectory & Dividend Allocation Model
+- `SCENARIOS.md` & `TRIGGERS.md` — Scenario Futures & Quantitative Trigger Systems
+- `STRESS_TESTS.md` & `CRISIS_PLAYBOOKS.md` — Sensitivity Stress-Tests & Emergency Response Playbooks
+- `FUNDING_DECISIONS.md` & `ACQ_CONVERSATIONS.md` — Capital Raise Filters & M&A Data Room Protocols
+- `RESILIENCE_DESIGN.md` — Financial, Operational & Cognitive Safety Margins
+
 ---
 
 ## 🚀 How to Run the Project Locally

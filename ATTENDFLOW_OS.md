@@ -108,3 +108,10 @@ AttendFlow OS is designed as a living, self-improving system. We continuously it
 | `FUNDING_DECISIONS.md` | Finance / Strategy | Capital Raise Decision Filters & Financing Trade-offs |
 | `ACQ_CONVERSATIONS.md` | M&A / Strategy | Acquisition Evaluation Filters & M&A Data Room Protocol |
 | `RESILIENCE_DESIGN.md` | Ops & Strategy | Financial, Operational & Cognitive Safety Margin Design |
+| `ATTENDFLOW_CONTRACT.md` | Executive Compass | The Founder & Company Operating Contract (2026–2031) |
+| `3_5_YEAR_NARRATIVE.md` | Strategy Compass | 3–5 Year Strategic North-Star Narrative & Growth Arc |
+| `FOCUS.md` | Strategy Compass | Strategic Themes, Priority Hierarchy & "What We Won't Do" |
+| `3_5_YEAR_PRODUCT_MARKET.md` | Product / Market | 3-Phase Product Evolution & Geographic Expansion Map |
+| `FOUNDER_3_5_YEAR.md` | Leadership Compass| Founder Journey, Health Non-Negotiables & Role Evolution |
+| `CULTURE_3_5_YEAR.md` | Culture | Scaling Core Values, Team Density & Remote-First Strategy |
+| `FINANCE_LIFESTYLE_3_5_YEAR.md` | Finance | 5-Year Financial Trajectory, Dividend Policy & Trade-offs |

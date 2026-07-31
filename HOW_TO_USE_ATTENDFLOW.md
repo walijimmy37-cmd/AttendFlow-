@@ -61,3 +61,16 @@ We design AttendFlow to be anti-fragile, thriving amidst market changes:
 - **Crisis Response**: We execute standardized emergency protocols within 24–72 hours (`CRISIS_PLAYBOOKS.md`).
 - **Capital & Acquisition Frameworks**: We evaluate funding raises (`FUNDING_DECISIONS.md`) and M&A proposals (`ACQ_CONVERSATIONS.md`) against strict quantitative filters.
 - **Safety Margin Design**: We embed financial (18-mo runway floor), operational (Bus factor cross-training), and cognitive (max 3 concurrent bets) margins into our architecture (`RESILIENCE_DESIGN.md`).
+
+---
+
+## 🧭 6. The 3–5 Year Compass Layer & Founder Contract
+
+Above our day-to-day execution sits our long-term strategic compass:
+
+- **The Operating Contract**: Read `ATTENDFLOW_CONTRACT.md` for our 5-year purpose, non-negotiables, and review rhythms.
+- **North-Star Story**: Read `3_5_YEAR_NARRATIVE.md` for our 2026–2031 growth trajectory and 5-year scale destination.
+- **Focus & Anti-Focus**: Consult `FOCUS.md` for our strategic themes, priority hierarchy, and strict "What We Won't Do" rules.
+- **Multi-Year Roadmap**: Review `3_5_YEAR_PRODUCT_MARKET.md` for 3-phase product evolution and geographic expansion plans.
+- **Founder & Culture Alignment**: Reference `FOUNDER_3_5_YEAR.md`, `CULTURE_3_5_YEAR.md`, and `FINANCE_LIFESTYLE_3_5_YEAR.md`.
+
