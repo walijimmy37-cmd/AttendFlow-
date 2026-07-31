@@ -71,7 +71,16 @@ AttendFlow includes a complete, enterprise-grade business specification system c
 - `FUNDING_DECISIONS.md` & `ACQ_CONVERSATIONS.md` — Capital Raise Filters & M&A Data Room Protocols
 - `RESILIENCE_DESIGN.md` — Financial, Operational & Cognitive Safety Margins
 
+### 🎯 6. Year 1 Execution Plan
+- `YEAR_1_STRATEGY.md` — Year 1 Strategic Themes, $20k MRR North-Star & Guardrails
+- `YEAR_1_QUARTERLY.md` — Q1–Q4 Quarterly Themes, Objectives & Key Results (OKRs)
+- `YEAR_1_MONTHLY.md` — Month-by-Month Milestone Roadmap (Revenue, Product, GTM, Ops)
+- `YEAR_1_WEEKLY.md` — Weekly Execution Priorities, Planning Templates & Friday Retros
+- `YEAR_1_RESOURCES.md` — Founder Time Allocation, $60k-$90k Budget & Hiring Triggers
+- `YEAR_1_LEARNING_LOG.md` — Founder Monthly Check-ins, Quarterly Reflections & Kaizen Logs
+
 ---
+
 
 ## 🚀 How to Run the Project Locally
 

@@ -74,3 +74,17 @@ Above our day-to-day execution sits our long-term strategic compass:
 - **Multi-Year Roadmap**: Review `3_5_YEAR_PRODUCT_MARKET.md` for 3-phase product evolution and geographic expansion plans.
 - **Founder & Culture Alignment**: Reference `FOUNDER_3_5_YEAR.md`, `CULTURE_3_5_YEAR.md`, and `FINANCE_LIFESTYLE_3_5_YEAR.md`.
 
+---
+
+## 🎯 7. How We Plan & Execute Year 1
+
+We translate our 5-year vision into concrete 12-month execution:
+
+- **Year 1 Strategy**: Read `YEAR_1_STRATEGY.md` for our North-Star outcome ($20k MRR) and 4 strategic themes.
+- **Quarterly OKRs**: Consult `YEAR_1_QUARTERLY.md` for Q1–Q4 quarterly themes, objectives, and key results.
+- **Monthly Milestones**: Follow `YEAR_1_MONTHLY.md` for month-by-month revenue, product, GTM, and team targets.
+- **Weekly Execution**: Use `YEAR_1_WEEKLY.md` for weekly priority templates, experiment bets, and Friday retros.
+- **Resources & Budget**: Check `YEAR_1_RESOURCES.md` for founder time allocation, spend plans, and hiring triggers.
+- **Learning & Reflection**: Log progress in `YEAR_1_LEARNING_LOG.md` for monthly health scores and quarterly reflections.
+
+

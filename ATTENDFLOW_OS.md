@@ -115,3 +115,10 @@ AttendFlow OS is designed as a living, self-improving system. We continuously it
 | `FOUNDER_3_5_YEAR.md` | Leadership Compass| Founder Journey, Health Non-Negotiables & Role Evolution |
 | `CULTURE_3_5_YEAR.md` | Culture | Scaling Core Values, Team Density & Remote-First Strategy |
 | `FINANCE_LIFESTYLE_3_5_YEAR.md` | Finance | 5-Year Financial Trajectory, Dividend Policy & Trade-offs |
+| `YEAR_1_STRATEGY.md` | Year 1 Plan | Year 1 Strategic Themes, North-Star & Operational Guardrails |
+| `YEAR_1_QUARTERLY.md` | Year 1 Plan | Q1–Q4 Quarterly Themes, Objectives & Key Results (OKRs) |
+| `YEAR_1_MONTHLY.md` | Year 1 Plan | Month-by-Month Milestone Map across Revenue, Product, GTM & Ops |
+| `YEAR_1_WEEKLY.md` | Year 1 Plan | Weekly Execution Priorities, Template & Friday Retro Prompts |
+| `YEAR_1_RESOURCES.md` | Year 1 Plan | Founder Time Split, Spend Budget & Hiring Triggers |
+| `YEAR_1_LEARNING_LOG.md` | Year 1 Plan | Founder Health Check-ins, Quarterly Reflections & OS Kaizen |
+
